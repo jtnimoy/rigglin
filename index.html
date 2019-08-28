@@ -1,0 +1,170 @@
+<script src="blockly/blockly_compressed.js"></script>
+<script src="blockly/blocks_compressed.js"></script>
+<script src="blockly/javascript_compressed.js"></script>
+
+<script src="blockly/msg/js/en.js"></script>
+
+<script src="p5js/p5.js"></script>
+<script src="p5js/sketch.js"></script>
+<button id="runButton" onMouseUp="runCode();"><img src="media/playbutton.png"/></button>
+<button id="saveButton" onMouseUp="saveCode();"><img src="media/savebutton.png"/></button>
+<div id="blocklyDiv" style="position: absolute"></div>
+<div id="blocklyArea" style=""></div>
+
+<xml id="toolbox" style="display: none">
+  <category name="p5" colour="000">
+    <block type="p5_point"></block>
+    <block type="p5_line"></block>
+  </category>
+  <category name="Control" colour="210">
+    <block type="controls_if"></block>
+    <block type="controls_whileUntil"></block>
+    <block type="controls_repeat_ext"></block>
+  </category>
+  <category name="Math" colour="120">
+    <block type="logic_compare"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="math_single"></block>
+    <block type="math_trig"></block>
+    <block type="math_constant"></block>
+    <block type="math_number_property"></block>
+    <block type="math_change"></block>
+    <block type="math_round"></block>
+    <block type="math_on_list"></block>
+    <block type="math_modulo"></block>
+    <block type="math_constrain"></block>
+    <block type="math_random_int"></block>
+    <block type="math_random_float"></block>
+    <block type="math_atan2"></block>
+  </category>
+  <category name="Text" colour="120">
+    <block type="text"></block>
+    <block type="text_print"></block>
+  </category>
+  <category name="Colour">
+    <block type="colour_picker"></block>
+    <block type="colour_random"></block>	
+  </category>
+  <category name="Variables Dynamic">
+    <block type="variables_get_dynamic"></block>
+    <block type="variables_set_dynamic"></block>
+  </category>
+
+</xml>
+<style>
+  #defaultCanvas1 {
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      margin: 25px 10px 10px 10px;
+  }
+</style>
+<script>
+  var blocklyArea = document.getElementById('blocklyArea');
+  var blocklyDiv = document.getElementById('blocklyDiv');
+  var workspace = Blockly.inject(blocklyDiv,
+				 {
+				     collapse: true,
+				     scrollbars: false,
+				     toolbox: document.getElementById('toolbox'),
+				     grid: {
+					 spacing: 20,
+					 length: 3,
+					 colour: '#ccc',
+					 snap: true
+				     },
+				     trashcan: true,
+				     zoom:
+				     {controls: true,
+				      wheel: true,
+				      startScale: 1.0,
+				      maxScale: 3,
+				      minScale: 0.3,
+				      scaleSpeed: 1.2}
+				 });
+  function onresize(e) {
+      // Compute the absolute coordinates and dimensions of blocklyArea.
+      var element = blocklyArea;
+      element.style.height = window.innerHeight;
+      element.style.width = window.innerWidth / 2;
+      var x = 0;
+      var y = 0;
+      do {
+	  x += element.offsetLeft;
+	  y += element.offsetTop;
+	  element = element.offsetParent;
+      } while (element);
+      // Position blocklyDiv over blocklyArea.
+      blocklyDiv.style.left = x + 'px';
+      blocklyDiv.style.top = y + 'px';
+      blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+      blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+      Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+
+  //-------------------------------------
+  /*
+  loadWorkspace(event.target);
+  Blockly.JavaScript.addReservedWords('code');
+  var code = Blockly.JavaScript.workspaceToCode(
+      Blockly.getMainWorkspace());
+  code += 'Rigglin.play();';
+  */
+
+  function saveCode() {
+      console.log(Blockly.JavaScript.workspaceToCode(workspace));
+  }
+  
+  function runCode() {
+      // Generate JavaScript code and run it.
+      window.LoopTrap = 1000;
+      Blockly.JavaScript.INFINITE_LOOP_TRAP =
+          'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+      try {
+          eval(code);
+      } catch (e) {
+          alert(e);
+      }
+  }
+  
+  var s = ( sketch ) => {
+      
+      let x = 50;
+      let y = 50;
+      
+      sketch.cmdQueue = [];
+      
+      sketch.setup = () => {
+	  sketch.createCanvas(200,200);
+	  sketch.background(250,100,200);
+      };
+      
+      sketch.draw = () => {
+	  //process cmd queue
+	  while(sketch.cmdQueue.length > 0){
+	      let code = sketch.cmdQueue.pop();
+	      console.log(code);
+	      eval(code);
+	  }
+      };
+      
+      sketch.inject = (s) => {
+	  sketch.cmdQueue.push(s);
+      }
+      
+  };
+  
+  var P5 = new p5(s);
+
+  //test
+  //P5.inject("sketch.point(50,50);");
+
+  
+  
+</script>
