@@ -1,5 +1,9 @@
 # Rigglin
 
+Riggin is a bridge between p5js and Blockly. It implements a language binding to the actual p5js engine.
+
+![](screenshot1.png)
+
 instructions for installing:
 launch `index.html` in a browser
 or visit http://rigglin.appspot.com
