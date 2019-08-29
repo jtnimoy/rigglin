@@ -36,18 +36,4 @@ or launch `index.html` in a browser
 
 ## Adding New Blocks
 
-todo
-	
----
-
-milestones:
-+ wk 1 sucessful compile from repo
-+ wk 1 integration of p5js
-+ wk 1 adding functions
-+ wk 1 tackled variable resolution bug
-+ wk 2 public to cloud for storage
-+ wk 2 style html layout
-+ wk 2 converted background() to blockly colour
-
-
-
+todo: write this
