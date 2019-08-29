@@ -47,19 +47,7 @@ milestones:
 + wk 1 tackled variable resolution bug
 + wk 2 public to cloud for storage
 + wk 2 style html layout
-
-
----
-
-## Similar Efforts
-### blockp5.js
-https://github.com/ycatch/blockp5.js/blob/master/README.ja.md
-Implements: createCanvas, setup, draw, fill, background, mouseX, mouseY, ellipse, rect
-
-### p5blockly
-https://github.com/MatzElectronics/p5blockly
-Implenents: ellipse
-	
++ wk 2 converted background() to blockly colour
 
 
 
