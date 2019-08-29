@@ -36,9 +36,14 @@ or launch `index.html` in a browser
 
 ## Adding New Blocks
 
-To add a new global function:
-	edit /blockly/blocks/p5.js and add a new entry for the block.
-	edit /blockly/generators/javascript/p5.js and add new JS code that generates more JS code.
-	edit /blockly/appengine/static/index.html and add the new block into the toolbar.
-	compile with `make build-regular`
-	deploy to App Engine with `make deploy`
+The following is for adding a new global function. I don't yet know how to add global variables like `width`, and I don't know how to do custom types like `PFont` or `PVector`
+
+edit /blockly/blocks/p5.js and add a new entry for the block.
+
+edit /blockly/generators/javascript/p5.js and add new JS code that generates more JS code.
+
+edit /blockly/appengine/static/index.html and add the new block into the toolbar.
+
+compile with `make build-regular`
+
+deploy to App Engine with `make deploy`
