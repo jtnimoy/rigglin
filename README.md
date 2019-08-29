@@ -1,22 +1,44 @@
 # Rigglin
 
-Riggin is a bridge between p5js and Blockly. It implements a language binding to the actual p5js engine.
+How easy and fun can we make learning to program for artists?
+
+Rigglin is a bridge between p5js and Blockly. It implements a language
+binding to the actual p5js engine.
+
+Rigglin is a Blockly-leaning Processing, which means it's not an attempt
+at bringing reduntant stuff over from Processing. Since Blockly
+already has a color system, we will use that instead. Precise color
+control can also be provided through additional implementation, but
+both should be available. One for ease of use, and one for advanced
+control.
 
 ![](screenshot1.png)
 
-instructions for installing:
-launch `index.html` in a browser
-or visit http://rigglin.appspot.com
 
-## compiling:
+
+## Installing
+visit http://rigglin.appspot.com
+or launch `index.html` in a browser
+
+---
+
+## Compiling:
 	cd to blockly/ and run `gulp`
+	copy to static:
+		/msg
+		/media
+		/demo
+		/*_compressed.js
 	
-## developing:
+## Developing:
 	cd into blockly/appengine
 	run `gcloud app deploy`
 
-## adding new blocks
+## Adding New Blocks
+
+todo
 	
+---
 
 milestones:
 + wk 1 sucessful compile from repo
@@ -25,3 +47,19 @@ milestones:
 + wk 1 tackled variable resolution bug
 + wk 2 public to cloud for storage
 + wk 2 style html layout
+
+
+---
+
+## Similar Efforts
+### blockp5.js
+https://github.com/ycatch/blockp5.js/blob/master/README.ja.md
+Implements: createCanvas, setup, draw, fill, background, mouseX, mouseY, ellipse, rect
+
+### p5blockly
+https://github.com/MatzElectronics/p5blockly
+Implenents: ellipse
+	
+
+
+
