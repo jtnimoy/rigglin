@@ -1,3 +1,8 @@
+all:
+	cd blockly;\
+	gulp;\
+	cp *_compressed.js appengine/static/
+
 local:
 	cd blockly/local_build;\
 	java -jar closure-compiler-v20190819.jar --js='main.js' \
@@ -11,13 +16,7 @@ local:
 	  --externs ../externs/svg-externs.js \
 	  --compilation_level ADVANCED_OPTIMIZATIONS \
 	  --dependency_mode=PRUNE --entry_point=Main \
-	  --js_output_file main_compressed.js; \
-	cp *_compressed.js ../appengine/static	
-
-all:
-	cd blockly;\
-	gulp
-	cp *_compressed.js ../appengine/static	
+	  --js_output_file main_compressed.js;
 
 deploy:
 	cd blockly/appengine;\
