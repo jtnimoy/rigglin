@@ -1,4 +1,4 @@
-all:
+local:
 	cd blockly/local_build;\
 	java -jar closure-compiler-v20190819.jar --js='main.js' \
 	  --js='../blocks/**.js' \
@@ -14,9 +14,10 @@ all:
 	  --js_output_file main_compressed.js; \
 	cp *_compressed.js ../appengine/static	
 
-build-regular:
+all:
 	cd blockly;\
 	gulp
+	cp *_compressed.js ../appengine/static	
 
 deploy:
 	cd blockly/appengine;\
