@@ -12,7 +12,7 @@ control can also be provided through additional implementation, but
 both should be available. One for ease of use, and one for advanced
 control.
 
-![](screenshot1.png)
+![](screenshot2.png)
 
 
 
