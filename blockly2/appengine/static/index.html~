@@ -1,0 +1,335 @@
+<script src="../storage.js"></script>
+
+<script src="blockly_compressed.js"></script>
+<script src="blocks_compressed.js"></script>
+<script src="javascript_compressed.js"></script>
+<script src="msg/js/en.js"></script>
+
+<script src="p5js/p5.js"></script>
+<script src="p5js/sketch.js"></script>
+
+<div id="welcomeSplash" onMouseDown="this.style.display = 'none';">
+  <img id="welcomeSplash-img" src="media/poster.png"/>
+</div>
+
+<div id="toolbar">
+  <div id="toolbar-leftHalf">
+    <a href="#">
+      <img src="media/playbutton.png" height="32"
+	   onMouseOver="this.src='media/playbutton_rollover.png';"
+	   onMouseOut="this.src='media/playbutton.png';"
+	   onMouseUp="runCode();" class="imageButton"/></a>
+    
+    <a href="#">
+      <img src="media/savebutton.png" height="32"
+	   onMouseOver="this.src='media/savebutton_rollover.png';"
+	   onMouseOut="this.src='media/savebutton.png';"
+	   onMouseUp="BlocklyStorage.link();" class="imageButton"/></a>
+  </div>
+  <div id="toolbar-rightHalf">
+    <a href="https://github.com/jtnimoy/rigglin/wiki" id="titleButton">
+      <img src="media/title.png" height="32"
+	   onMouseOver="this.src='media/title_rollover.png';"
+	   onMouseOut="this.src='media/title.png';"
+	   onMouseUp="" class="imageButton"/></a>
+  </div>
+  
+  
+</div>
+
+<div id="workArea">
+  <div id="blocklyDiv" style="position: absolute"></div>
+  <div id="blocklyArea" style=""></div>
+</div>
+
+<xml id="toolbox" style="display: none">
+  <category name="p5" colour="000">
+    <category name="Drawing" color="220">
+      <block type="p5_createCanvas"></block>
+      <block type="p5_background"></block>
+      <block type="p5_point"></block>
+      <block type="p5_line"></block>
+    </category>
+  </category>
+
+  <category name="Controls" colour="210">
+    <block type="controls_if"></block>
+    <block type="controls_ifelse"></block>
+    <block type="controls_whileUntil"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="controls_repeat"></block>
+    <block type="controls_for"></block>
+    <block type="controls_forEach"></block>
+    <block type="controls_flow_statements"></block>
+  </category>
+  <category name="Logic" colour="210">
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+    
+  </category>
+  <category name="Math" colour="120">
+    
+    <block type="math_number">
+      <field name="NUM">42</field>
+    </block>
+    <block type="math_arithmetic"></block>
+    <block type="math_single"></block>
+    <block type="math_trig"></block>
+    <block type="math_constant"></block>
+    <block type="math_number_property"></block>
+    <block type="math_change"></block>
+    <block type="math_round"></block>
+    <block type="math_on_list"></block>
+    <block type="math_modulo"></block>
+    <block type="math_constrain"></block>
+    <block type="math_random_int"></block>
+    <block type="math_random_float"></block>
+    <block type="math_atan2"></block>
+  </category>
+  <category name="Text" colour="121">
+    <block type="text"></block>
+    <block type="text_join"></block>
+    <block type="text_append"></block>
+    <block type="text_length"></block>
+    <block type="text_isEmpty"></block>
+    <block type="text_indexOf"></block>
+    <block type="text_charAt"></block>
+    <block type="text_getSubstring"></block>
+    <block type="text_changeCase"></block>
+    <block type="text_trim"></block>
+    <block type="text_print"></block>
+    <block type="text_prompt_ext"></block>
+    <block type="text_prompt"></block>
+    <block type="text_count"></block>
+    <block type="text_replace"></block>
+    <block type="text_reverse"></block>
+  </category>
+  <category name="Colour" colour="122">
+    <block type="colour_picker"></block>
+    <block type="colour_random"></block>
+    <block type="colour_rgb"></block>
+    <block type="colour_blend"></block>
+  </category>
+  <category name="Variables" colour="123">
+    <block type="variables_get_dynamic"></block>
+    <block type="variables_set_dynamic"></block>
+  </category>
+
+</xml>
+<style>
+
+  #welcomeSplash{
+      position: absolute;
+      margin-left: -197px;
+      margin-top: -176px;
+      left: 50%;
+      top: 50%;
+      z-index: 1000;
+  }
+
+  #welcomeSplash-img{
+      border-radius: 10px;
+      width: 394px;
+      height: 352px: 
+  }
+  
+  /* hide the first p5 */
+  #defaultCanvas0{
+      display: none;
+  }
+  
+  #workArea{
+      display: inline-block;
+  }
+  
+  .p5Canvas {
+      vertical-align: top;
+  }
+  
+  #toolbar{
+      background: url('media/p5masthead-2.png');
+      width:100%;
+      text-align: left;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+  }
+
+  
+  #toolbar-leftHalf{
+      width:49%;
+      text-align: left;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+  }
+
+  #toolbar-rightHalf{
+      width:50%;
+      text-align: right;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+  }
+
+  
+  
+  .imageButton{
+      margin: 10px 5px 10px 5px;
+  }
+
+  body{
+      margin: 0;
+      background: #ddd;
+  }
+</style>
+<script>
+
+  
+  var blocklyArea = document.getElementById('blocklyArea');
+  var blocklyDiv = document.getElementById('blocklyDiv');
+  var workspace = Blockly.inject(blocklyDiv,
+				 {
+				     collapse: true,
+				     scrollbars: false,
+				     toolbox: document.getElementById('toolbox'),
+				     grid: {
+					 spacing: 20,
+					 length: 3,
+					 colour: '#ddd',
+					 snap: true
+				     },
+				     trashcan: false,
+				     zoom:
+				     {controls: true,
+				      wheel: true,
+				      startScale: 1.0,
+				      maxScale: 3,
+				      minScale: 0.3,
+				      scaleSpeed: 1.2}
+				 });
+
+  //blockly storage
+  BlocklyStorage.HTTPREQUEST_ERROR = 'There was a problem with the request.\n';
+  BlocklyStorage.LINK_ALERT = 'Share your blocks with this link:\n\n%1';
+  BlocklyStorage.HASH_ERROR = 'Sorry, "%1" doesn\'t correspond with any saved Blockly file.';
+  BlocklyStorage.XML_ERROR = 'Could not load your saved file.\n' +
+    'Perhaps it was created with a different version of Blockly?';
+
+  Blockly.HSV_SATURATION = 0.2; // 0 (inclusive) to 1 (exclusive), defaulting to 0.45
+  Blockly.HSV_VALUE = 0.3; // 0 (inclusive) to 1 (exclusive), defaulting to 0.65
+  
+  var P5_WIDTH = 100;
+  var P5_HEIGHT = 100;
+  
+  //restore from cloud
+  if ('BlocklyStorage' in window && window.location.hash.length > 1) {
+      BlocklyStorage.retrieveXml(window.location.hash.substring(1));
+  }
+  
+  function onresize(e) {
+      
+      // Compute the absolute coordinates and dimensions of blocklyArea.
+      var element = blocklyArea;
+      element.style.height = window.innerHeight - 54;
+      
+      //extra 10 to ensure it will flow to the right
+      element.style.width = window.innerWidth - P5_WIDTH - 10;
+      
+      var x = 0;
+      var y = 0;
+
+      do {
+	  x += element.offsetLeft;
+	  y += element.offsetTop;
+	  element = element.offsetParent;
+      } while (element);
+
+      // Position blocklyDiv over blocklyArea.
+      blocklyDiv.style.left = x + 'px';
+      blocklyDiv.style.top = y + 'px';
+      blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+      blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+      Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+
+  //-------------------------------------
+  /*
+  loadWorkspace(event.target);
+  Blockly.JavaScript.addReservedWords('code');
+  var code = Blockly.JavaScript.workspaceToCode(
+      Blockly.getMainWorkspace());
+  code += 'Rigglin.play();';
+  */
+
+  function runCode() {
+      // Generate JavaScript code and run it.
+      window.LoopTrap = 1000;
+      
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = '\
+if (--window.LoopTrap == 0) \
+      throw "Infinite loop.";\n\
+';
+      
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+      try {
+	  //console.log(code);
+          eval(code);
+      } catch (e) {
+          alert(e);
+      }
+  }
+  
+  var s = ( sketch ) => {
+      
+      let x = 50;
+      let y = 50;
+      
+      sketch.cmdQueue = [];
+      
+      sketch.setup = () => {
+	  sketch.createCanvas(100,100)
+	  sketch.background(255);
+      };
+      
+      sketch.draw = () => {
+	  //process cmd queue
+	  while(sketch.cmdQueue.length > 0){
+	      let code = sketch.cmdQueue.shift();
+	      console.log(code);
+	      try{
+		  eval(code);
+	      }catch(e){
+		  console.debug(e);
+		  console.debug(code);
+	      }
+	  }
+      };
+      
+      sketch.inject = (s) => {
+	  sketch.cmdQueue.push(s);
+      }
+      
+  };
+  
+  var P5 = new p5(s);
+
+  //test
+  //P5.inject("sketch.point(50,50);");
+
+  //hide splash screen
+
+  function hideSplash(){
+      document.getElementById('welcomeSplash').style.display = 'none';
+  };
+  setTimeout("hideSplash()",1000)
+  
+</script>

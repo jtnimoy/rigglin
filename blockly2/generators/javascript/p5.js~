@@ -1,0 +1,60 @@
+
+'use strict';
+
+goog.provide('Blockly.JavaScript.p5');
+goog.require('Blockly.JavaScript');
+
+
+Blockly.JavaScript['p5_createCanvas'] = function(block) {
+    var value_width = Blockly.JavaScript.valueToCode(block,'width',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_height = Blockly.JavaScript.valueToCode(block,'height',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var code =
+	'P5_WIDTH  = ' + value_width  + ';\n' + //record the globals
+	'P5_HEIGHT = ' + value_height + ';\n' + 
+	+ 'P5.inject("sketch.createCanvas(" + '//inject as usual
+	+ value_width + ' + "," +'
+	+ value_height + ' + ");");\n';
+    return code;
+    
+};
+
+
+Blockly.JavaScript['p5_background'] = function(block) {
+    var value_color = Blockly.JavaScript.valueToCode(block,'color',Blockly.JavaScript.ORDER_ATOMIC) || '#000000';
+    //extra single quotes to ensure this will be a string literal.
+    var code = 'P5.inject("sketch.background(\'"+'+value_color+'+"\');");\n';
+    return code;
+};
+
+
+
+
+Blockly.JavaScript['p5_point'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block,'x',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block,'y',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var code = 'P5.inject("sketch.point(" + '
+	+ value_x + ' + "," +'
+	+ value_y + ' + ");");\n';
+    return code;
+    
+};
+
+
+
+Blockly.JavaScript['p5_line'] = function(block) {
+    var value_x1 = Blockly.JavaScript.valueToCode(block,'x1',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y1 = Blockly.JavaScript.valueToCode(block,'y1',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_x2 = Blockly.JavaScript.valueToCode(block,'x2',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y2 = Blockly.JavaScript.valueToCode(block,'y2',Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var code = 'P5.inject("sketch.line(" + '
+	+ value_x1 + ' + "," +'
+	+ value_y1 + ' + "," +'
+	+ value_x2 + ' + "," +'
+	+ value_y2 + ' + ");");\n';
+    
+    return code;
+};
+
