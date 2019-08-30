@@ -309,6 +309,45 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "clear canvas with color"
     }
     
+    ,
+
+    {
+  "type": "p5_dist",
+  "message0": "dist %1 x1 %2 y1 %3 x2 %4 y2 %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y2",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "calculate distance between two points",
+  "helpUrl": "calculate distance between two points"
+    }
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 

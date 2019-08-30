@@ -140,3 +140,31 @@ Blockly.JavaScript['p5_draw'] = function(block) {
     var code = 'P5_handler_draw = function() {\n' + statements_name + '};\n';
     return code;
 };
+
+Blockly.JavaScript['p5_dist'] = function(block) {
+    var value_x1 = Blockly.JavaScript.valueToCode(block, 'x1', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y1 = Blockly.JavaScript.valueToCode(block, 'y1', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x2 = Blockly.JavaScript.valueToCode(block, 'x2', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y2 = Blockly.JavaScript.valueToCode(block, 'y2', Blockly.JavaScript.ORDER_ATOMIC);
+
+    
+    var functionName = Blockly.JavaScript.provideFunction_(
+	'dist',
+	['function ' + Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(x1,y1,x2,y2) {',
+         '  var xx = x1 - x2;',
+	 '  var yy = y1 - y2;',
+         '  return Math.sqrt(xx*xx+yy*yy);',
+         '}']);
+    
+    var code = functionName + '('
+	+ value_x1 + ','
+	+ value_y1 + ','
+	+ value_x2 + ','
+	+ value_y2
+	+ ')';
+    
+    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    
+    //var code = '...;\n';
+    //return code;
+};
