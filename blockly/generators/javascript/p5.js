@@ -23,7 +23,10 @@ Blockly.JavaScript['p5_createCanvas'] = function(block) {
 
 Blockly.JavaScript['p5_background'] = function(block) {
     var value_color = Blockly.JavaScript.valueToCode(block,'color',Blockly.JavaScript.ORDER_ATOMIC) || '\'#000000\'';
-    var code = 'P5.inject("sketch.background(\'"+'+ value_color +'+"\');");\n';
+    //var code = 'P5.inject("sketch.background(\'"+'+ value_color +'+"\');");\n';
+    console.log( value_color );
+    var code = 'P5.background(' + value_color +  ');';//extra quotes for colours
+    console.log( code );
     return code;
 };
 
@@ -203,4 +206,20 @@ Blockly.JavaScript['p5_vector_get'] = function(block) {
   var code = value_that + '.' + dropdown_varname;
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_text'] = function(block) {
+  var value_string = Blockly.JavaScript.valueToCode(block, 'string', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
+  var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+  var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+  // TODO: Assemble JavaScript into code variable.
+    //var code = 'P5.inject("sketch.text(\\\"this is a test\\\"," +'
+	//+ value_x + ' + "," +'
+    //+ value_y + ' + ");");\n';
+
+    return 'console.log(' + value_string + ');\n';
+    /*
+    console.log("generator value_string: "+value_string);
+    console.log("generator code: "+code);
+    return code; */
 };

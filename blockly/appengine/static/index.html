@@ -93,7 +93,11 @@
 	<block type="p5_setup"></block>
 	<block type="p5_draw"></block>
       </category>
-      
+
+      <category name="Typography" colour="220">
+	<block type="p5_text"></block>
+      </category>
+
       
   </category>
     
@@ -296,12 +300,13 @@
 
   function stopCode() {
       HANDLER_DRAW = 0;
-      console.log("stopped");
+      console.log("stop");
   }
 
   //-------------------------------------
   
   function runCode() {
+      console.log("run");
       // Generate JavaScript code and run it.
       window.LoopTrap = 10000;
       
@@ -350,6 +355,7 @@ if (--window.LoopTrap == 0) \
 	  while(sketch.cmdQueue.length > 0){
 	      let code = sketch.cmdQueue.shift();
 	      try{
+		  console.debug("p5.eval: "+code);
 		  eval(code);
 	      }catch(e){
 		  console.debug(e);

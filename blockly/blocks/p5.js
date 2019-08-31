@@ -441,7 +441,39 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "get a component of a p5.Vector"
     }
     
+    ,
 
+    {
+  "type": "p5_text",
+  "message0": "text %1 string %2 x %3 y %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "string",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "render text on the canvas",
+  "helpUrl": "render text on the canvas"
+}
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
