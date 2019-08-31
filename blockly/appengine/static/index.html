@@ -299,7 +299,8 @@
   //-------------------------------------
 
   function stopCode() {
-      HANDLER_DRAW = 0;
+      //HANDLER_DRAW = 0;
+      P5.draw = function(){};
       console.log("stop");
   }
 
@@ -325,33 +326,23 @@ if (--window.LoopTrap == 0) \
           alert(e);
       }
       //generate setup event
-      
+      P5.frameCount = 0;
+      P5.setup();
   }
 
   
   var s = ( sketch ) => {
       
-      let x = 50;
-      let y = 50;
-      
       sketch.cmdQueue = [];
       
       sketch.setup = () => {
-	  sketch.createCanvas(P5_WIDTH,P5_HEIGHT)
+	  sketch.createCanvas(P5_WIDTH,P5_HEIGHT);
 	  sketch.background(255);
-
       };
       
       sketch.draw = () => {
-	  //prep globals
-	  P5_WIDTH = sketch.width;
-	  P5_HEIGHT = sketch.height;
-	  P5_MOUSEX = sketch.mouseX;
-	  P5_MOUSEY = sketch.mouseY;
-	  P5_PMOUSEX = sketch.pmouseX;
-	  P5_PMOUSEY = sketch.pmouseY;
 
-	  //process cmd queue
+	  //process cmd queue. deprecated!
 	  while(sketch.cmdQueue.length > 0){
 	      let code = sketch.cmdQueue.shift();
 	      try{
@@ -362,20 +353,6 @@ if (--window.LoopTrap == 0) \
 		  console.debug(code);
 	      }
 	  }
-
-	  //execute setup code if any is found, then eliminate it
-	  if(P5_handler_setup != 0){
-	      P5_handler_setup();
-	      P5_handler_setup = 0;
-	  }
-
-	  //always call the draw code. but with what scope?
-	  if(P5_handler_draw != 0){
-	      P5_handler_draw();
-	  }
-
-	  P5_FRAMECOUNT++;
-
       };
 
       sketch.inject = (s) => {
@@ -395,7 +372,7 @@ if (--window.LoopTrap == 0) \
       element.style.height = window.innerHeight - 54;
       
       //extra 10 to ensure it will flow to the right
-      element.style.width = window.innerWidth - P5_WIDTH - 10;
+      element.style.width = window.innerWidth - (P5.width || P5_WIDTH) - 10;
       
       var x = 0;
       var y = 0;
@@ -427,6 +404,6 @@ if (--window.LoopTrap == 0) \
   function hideSplash(){
       document.getElementById('welcomeSplash').style.display = 'none';
   };
-  setTimeout("hideSplash()",5000)
+  setTimeout("hideSplash()",2000)
   
 </script>
