@@ -142,10 +142,10 @@ Blockly.JavaScript['p5_draw'] = function(block) {
 };
 
 Blockly.JavaScript['p5_dist'] = function(block) {
-    var value_x1 = Blockly.JavaScript.valueToCode(block, 'x1', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_y1 = Blockly.JavaScript.valueToCode(block, 'y1', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_x2 = Blockly.JavaScript.valueToCode(block, 'x2', Blockly.JavaScript.ORDER_ATOMIC);
-    var value_y2 = Blockly.JavaScript.valueToCode(block, 'y2', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x1 = Blockly.JavaScript.valueToCode(block, 'x1', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y1 = Blockly.JavaScript.valueToCode(block, 'y1', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_x2 = Blockly.JavaScript.valueToCode(block, 'x2', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y2 = Blockly.JavaScript.valueToCode(block, 'y2', Blockly.JavaScript.ORDER_ATOMIC) || 0;
 
     
     var functionName = Blockly.JavaScript.provideFunction_(
@@ -167,4 +167,40 @@ Blockly.JavaScript['p5_dist'] = function(block) {
     
     //var code = '...;\n';
     //return code;
+};
+
+Blockly.JavaScript['p5_wantspvector'] = function(block) {
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+    // TODO: Assemble JavaScript into code variable.
+    console.log(value_name);
+    var code = '...;\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_createvector'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_z = Blockly.JavaScript.valueToCode(block, 'z', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var functionName = Blockly.JavaScript.provideFunction_(
+	'dist',
+	['function ' + Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(x,y,z) {',
+         '  return createVector(x,y,z);',
+         '}']);
+    
+    var code = functionName + '('
+	+ value_x + ','
+	+ value_y + ','
+	+ value_z +')';
+    
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_vector_get'] = function(block) {
+  var dropdown_varname = block.getFieldValue('varname');
+  var value_that = Blockly.JavaScript.valueToCode(block, 'that', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = value_that + '.' + dropdown_varname;
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };

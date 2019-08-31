@@ -348,6 +348,100 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "calculate distance between two points",
   "helpUrl": "calculate distance between two points"
     }
+    ,
+    {
+  "type": "p5_wantspvector",
+  "message0": "wantspvector %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+	"check": "p5.Vector"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+}
+
+    ,
+
+    {
+	"type": "p5_createvector",
+	"message0": "createVector %1 x %2 y %3 z %4",
+	"args0": [
+	    {
+		"type": "input_dummy"
+	    },
+	    {
+		"type": "input_value",
+		"name": "x",
+		"check": "Number",
+		"align": "RIGHT"
+	    },
+	    {
+		"type": "input_value",
+		"name": "y",
+		"check": "Number",
+		"align": "RIGHT"
+	    },
+	    {
+		"type": "input_value",
+		"name": "z",
+		"check": "Number",
+		"align": "RIGHT"
+	    }
+	],
+	"output": "p5.Vector",
+	"colour": 230,
+	"tooltip": "create a new PVector",
+	"helpUrl": "create a new PVector"
+    }
+
+
+    ,
+
+    {
+  "type": "p5_vector_get",
+  "message0": "get %1 %2 of p5.Vector %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "varname",
+      "options": [
+        [
+          "x",
+          "x"
+        ],
+        [
+          "y",
+          "y"
+        ],
+        [
+          "z",
+          "z"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "that",
+      "check": "p5.Vector"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 230,
+  "tooltip": "get a component of a p5.Vector",
+  "helpUrl": "get a component of a p5.Vector"
+    }
+    
+
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
