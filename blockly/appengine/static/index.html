@@ -12,6 +12,13 @@
   <img id="welcomeSplash-img" src="media/poster.png"/>
 </div>
 
+<div id="codeView">
+  <pre id="codeView-pre">
+    loading code...
+  </pre>
+  <button onMouseUp="document.getElementById('codeView').style.display='none';">CLOSE</button>
+</div>
+
 <div id="toolbar">
   <div id="toolbar-leftHalf">
     <a href="#">
@@ -30,6 +37,11 @@
 	   onMouseOver="this.src='media/savebutton_rollover.png';"
 	   onMouseOut="this.src='media/savebutton.png';"
 	   onMouseUp="BlocklyStorage.link();" class="imageButton"/></a>
+    <a href="#">
+      <img src="media/codebutton.png" height="32"
+	   onMouseOver="this.src='media/codebutton_rollover.png';"
+	   onMouseOut="this.src='media/codebutton.png';"
+	   onMouseUp="viewCode();" class="imageButton"/></a>
   </div>
   <div id="toolbar-rightHalf">
     <a href="https://github.com/jtnimoy/rigglin/wiki" id="titleButton">
@@ -51,6 +63,10 @@
   <category name="p5" colour="000">
 
     <category name="Color" colour="220">
+      <block type="colour_picker"></block>
+      <block type="colour_random"></block>
+      <block type="colour_rgb"></block>
+      <block type="colour_blend"></block>
       <block type="p5_createCanvas"></block>
       <block type="p5_background"></block>
       <block type="p5_stroke"></block>
@@ -159,12 +175,6 @@
     <block type="text_replace"></block>
     <block type="text_reverse"></block>
   </category>
-  <category name="Colour" colour="122">
-    <block type="colour_picker"></block>
-    <block type="colour_random"></block>
-    <block type="colour_rgb"></block>
-    <block type="colour_blend"></block>
-  </category>
   <category name="Variables" colour="123">
     <block type="variables_get_dynamic"></block>
     <block type="variables_set_dynamic"></block>
@@ -183,6 +193,33 @@
       filter: drop-shadow(10px 10px 4px rgba(0,0,0,0.3));
   }
 
+
+  #codeView-pre{
+      background: white;
+      padding: 10px;
+      height: 300px;
+      
+  }
+
+  
+  #codeView{
+      display: none;
+      position: absolute;
+      background: white;
+      margin-left: -400px;
+      margin-top: -200px;
+      left: 50%;
+      top: 50%;
+      width: 800px;
+      height: 400px;
+      z-index: 1000;
+      filter: drop-shadow(10px 10px 4px rgba(0,0,0,0.3));
+      padding: 10px;
+      
+  }
+
+
+  
   #welcomeSplash-img{
       border-radius: 10px;
       width: 394px;
@@ -300,6 +337,19 @@
   }
 
   //-------------------------------------
+
+  function viewCode(){
+      var code = Blockly.JavaScript.workspaceToCode(workspace);
+      var elm = document.getElementById("codeView");
+      //toggle
+      if(elm.style.display !== 'inline-block'){
+	  elm.style.display = "inline-block";
+      }else{
+	  elm.style.display = "none";
+      }
+      var elmpre = document.getElementById("codeView-pre");
+      elmpre.textContent = code;
+  }
   
   function runCode() {
       console.log("run");
