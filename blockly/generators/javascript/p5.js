@@ -11,7 +11,7 @@ Blockly.JavaScript['p5_createCanvas'] = function(block) {
     
     var code =
 	'P5.createCanvas('+ value_width + ',' + value_height + ');\n' +
-	'onresize();\n'; // force the layout to go again    
+	'onresize();\n'; // force the layout to go again
     return code;
     
 };
@@ -181,16 +181,30 @@ Blockly.JavaScript['p5_text'] = function(block) {
   var value_string = Blockly.JavaScript.valueToCode(block, 'string', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
   var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
-  // TODO: Assemble JavaScript into code variable.
-    //var code = 'P5.inject("sketch.text(\\\"this is a test\\\"," +'
-	//+ value_x + ' + "," +'
-    //+ value_y + ' + ");");\n';
     
-    //return 'console.log(' + value_string + ');\n';
-    /*
-    console.log("generator value_string: "+value_string);
-    console.log("generator code: "+code);
-    return code; */
     var code = 'P5.text(' + value_string + ',' + value_x + ',' + value_y + ')';
     return code;
+};
+
+Blockly.JavaScript['p5_loadfont'] = function(block) {
+    var dropdown_name = block.getFieldValue('NAME');
+    var value_url = Blockly.JavaScript.valueToCode(block, 'url', Blockly.JavaScript.ORDER_ATOMIC);
+
+    console.log(value_url);
+    var code;
+    if(value_url){
+	code = 'P5.loadFont(' + value_url + ')';
+    }else{
+	code = 'P5.loadFont("' + dropdown_name + '")';
+    }
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['p5_textfont'] = function(block) {
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
+  // TODO: Assemble JavaScript into code variable.
+    var code = 'P5.textFont('+value_name+');\n';
+    console.log(code);
+    console.log(value_name);
+  return code;
 };

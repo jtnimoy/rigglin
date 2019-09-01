@@ -96,6 +96,8 @@
 
       <category name="Typography" colour="220">
 	<block type="p5_text"></block>
+	<block type="p5_loadfont"></block>
+	<block type="p5_textfont"></block>
       </category>
 
       
@@ -282,13 +284,6 @@
   //initial canvas dimensions
   var P5_WIDTH = 400;
   var P5_HEIGHT = 400;
-  var P5_MOUSEX = 400;
-  var P5_MOUSEY = 400;
-  var P5_PMOUSEX = 400;
-  var P5_PMOUSEY = 400;
-  var P5_FRAMECOUNT = 0;
-  var P5_handler_setup = 0;
-  var P5_handler_draw = 0;
   
   if(window.innerWidth < 900){ //elastic breakpoint
       P5_WIDTH = 100;
@@ -333,7 +328,11 @@ if (--window.LoopTrap == 0) \
   
   var s = ( sketch ) => {
       
-      sketch.cmdQueue = [];
+      //sketch.cmdQueue = [];
+
+      sketch.preload = () => {
+	  sketch.loadFont('assets/inconsolata.otf');
+      }
       
       sketch.setup = () => {
 	  sketch.createCanvas(P5_WIDTH,P5_HEIGHT);
@@ -343,7 +342,7 @@ if (--window.LoopTrap == 0) \
       sketch.draw = () => {
 
 	  //process cmd queue. deprecated!
-	  while(sketch.cmdQueue.length > 0){
+	  /* while(sketch.cmdQueue.length > 0){
 	      let code = sketch.cmdQueue.shift();
 	      try{
 		  console.debug("p5.eval: "+code);
@@ -352,12 +351,12 @@ if (--window.LoopTrap == 0) \
 		  console.debug(e);
 		  console.debug(code);
 	      }
-	  }
+	      }*/
       };
 
-      sketch.inject = (s) => {
-	  sketch.cmdQueue.push(s);
-      };
+      //sketch.inject = (s) => {
+      //sketch.cmdQueue.push(s);
+  //};
       
   };
   

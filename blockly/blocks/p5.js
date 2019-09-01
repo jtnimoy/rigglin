@@ -473,7 +473,78 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 230,
   "tooltip": "render text on the canvas",
   "helpUrl": "render text on the canvas"
+    }
+
+    ,
+
+{
+  "type": "p5_loadfont",
+  "message0": "loadFont %1 or URL %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "assets/inconsolata.otf",
+          "assets/inconsolata.otf"
+        ],
+        [
+          "assets/AbrilFatface-Regular.otf",
+          "assets/AbrilFatface-Regular.otf"
+        ],
+        [
+          "assets/Compagnon-Light.otf",
+          "assets/Compagnon-Light.otf"
+        ],
+        [
+          "assets/Compagnon-Roman.otf",
+          "assets/Compagnon-Roman.otf"
+        ],
+        [
+          "assets/D-DINCondensed-Bold.otf",
+          "assets/D-DINCondensed-Bold.otf"
+        ],
+        [
+          "assets/GlacialIndifference-Regular.otf",
+          "assets/GlacialIndifference-Regular.otf"
+        ],
+        [
+          "assets/VictorMono-Medium.otf",
+          "assets/VictorMono-Medium.otf"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "url",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "p5.Font",
+  "colour": 230,
+  "tooltip": "load a font file",
+  "helpUrl": "load a font file"
 }
+    ,
+    {
+  "type": "p5_textfont",
+  "message0": "textFont %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "p5.Font"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "change the font of the rendered text",
+  "helpUrl": "change the font of the rendered text"
+}
+
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
