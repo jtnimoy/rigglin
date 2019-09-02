@@ -597,6 +597,27 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "",
   "helpUrl": ""
 }
+
+    ,
+
+    {
+  "type": "p5_textleading",
+  "message0": "textLeading %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets/gets the spacing, in pixels, between lines of text. This setting will be used in all subsequent calls to the text() function.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textLeading"
+    }
+
+    
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
