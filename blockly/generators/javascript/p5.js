@@ -208,3 +208,16 @@ Blockly.JavaScript['p5_textfont'] = function(block) {
     console.log(value_name);
   return code;
 };
+
+
+
+
+Blockly.JavaScript['p5_textalign'] = function(block) {
+    var dropdown_horizalign = block.getFieldValue('horizAlign');
+    var dropdown_vertalign = block.getFieldValue('vertAlign');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'P5.textAlign('+dropdown_horizalign+','+dropdown_vertalign+');\n';
+    console.log(code);
+    return code;
+};
+

@@ -544,7 +544,59 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "change the font of the rendered text",
   "helpUrl": "change the font of the rendered text"
 }
+    ,
 
+    {
+  "type": "p5_textalign",
+  "message0": "textAlign %1 %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "horizAlign",
+      "options": [
+        [
+          "LEFT",
+          "LEFT"
+        ],
+        [
+          "CENTER",
+          "CENTER"
+        ],
+        [
+          "RIGHT",
+          "RIGHT"
+        ]
+      ]
+    },
+    {
+      "type": "field_dropdown",
+      "name": "vertAlign",
+      "options": [
+        [
+          "TOP",
+          "TOP"
+        ],
+        [
+          "BOTTOM",
+          "BOTTOM"
+        ],
+        [
+          "CENTER",
+          "CENTER"
+        ],
+        [
+          "BASELINE",
+          "BASELINE"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+}
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
