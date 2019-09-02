@@ -793,7 +793,19 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 230,
   "tooltip": "Computes an array of points following the path for specified text",
   "helpUrl": "https://p5js.org/reference/#/p5.Font/textToPoints"
-}
+    }
+    ,
+
+    {
+  "type": "p5_clear",
+  "message0": "clear",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Clears the pixels within a buffer. This function only clears the canvas. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/clear"
+    }
+    
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 

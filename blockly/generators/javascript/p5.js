@@ -285,3 +285,10 @@ Blockly.JavaScript['p5_font_texttopoints'] = function(block) {
 
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+
+Blockly.JavaScript['p5_clear'] = function(block) {
+    
+  var code = 'P5.clear();\n';
+  return code;
+};
