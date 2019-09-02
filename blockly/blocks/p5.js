@@ -617,7 +617,24 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/textLeading"
     }
 
-    
+    ,
+
+    {
+  "type": "p5_textsize",
+  "message0": "textSize %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets/gets the current font size. This size will be used in all subsequent calls to the text() function. Font size is measured in pixels.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textSize"
+    }
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 

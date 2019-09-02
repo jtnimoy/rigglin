@@ -42,6 +42,11 @@
 	   onMouseOver="this.src='media/codebutton_rollover.png';"
 	   onMouseOut="this.src='media/codebutton.png';"
 	   onMouseUp="viewCode();" class="imageButton"/></a>
+    <a href="#">
+      <img src="media/restorebutton.png" height="32"
+	   onMouseOver="this.src='media/restorebutton_rollover.png';"
+	   onMouseOut="this.src='media/restorebutton.png';"
+	   onMouseUp="BlocklyStorage.restoreBlocks();" class="imageButton"/></a>
   </div>
   <div id="toolbar-rightHalf">
     <a href="https://github.com/jtnimoy/rigglin/wiki" id="titleButton">
@@ -62,15 +67,25 @@
 <xml id="toolbox" style="display: none">
   
   <category name="Color" colour="220">
-    <block type="colour_picker"></block>
-    <block type="colour_random"></block>
-    <block type="colour_rgb"></block>
-    <block type="colour_blend"></block>
-    <block type="p5_createCanvas"></block>
-    <block type="p5_background"></block>
-    <block type="p5_stroke"></block>
-    <block type="p5_fill"></block>
+    <category name="Creating & Reading" colour="220">
+      <block type="colour_picker"></block>
+      <block type="colour_random"></block>
+      <block type="colour_rgb"></block>
+      <block type="colour_blend"></block>
+	  
+    </category>
+    <category name="Setting" colour="220">
+      <block type="p5_background"></block>
+      <block type="p5_stroke"></block>
+      <block type="p5_fill"></block>
+    </category>
+    
   </category>
+
+  <category name="DOM" colour="220">
+    <block type="p5_createCanvas"></block>
+  </category>
+	
   
   <category name="Math" colour="220">
     <block type="p5_dist"></block>
@@ -141,6 +156,7 @@
     <block type="p5_textfont"></block>
     <block type="p5_textalign"></block>
     <block type="p5_textleading"></block>
+    <block type="p5_textsize"></block>
   </category>
   
   <category name="Text" colour="121">
@@ -329,11 +345,16 @@
   Blockly.HSV_VALUE = 0.3; // 0 (inclusive) to 1 (exclusive), defaulting to 0.65
 
   
+  BlocklyStorage.backupOnUnload();//use local storage
+
+  
   //restore from cloud
   if ('BlocklyStorage' in window && window.location.hash.length > 1) {
       BlocklyStorage.retrieveXml(window.location.hash.substring(1));
   }
 
+  
+  
   //initial canvas dimensions
   var P5_WIDTH = 400;
   var P5_HEIGHT = 400;
@@ -395,9 +416,8 @@ if (--window.LoopTrap == 0) \
   var s = ( sketch ) => {
       
       //sketch.cmdQueue = [];
-
+      
       sketch.preload = () => {
-	  sketch.loadFont('assets/inconsolata.otf');
       }
       
       sketch.setup = () => {
