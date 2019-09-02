@@ -686,6 +686,28 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Calculates and returns the width of any character or text string.",
   "helpUrl": "https://p5js.org/reference/#/p5/textWidth"
 }
+    ,
+
+    {
+  "type": "p5_textascent",
+  "message0": "textAscent",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Returns the ascent of the current font at its current size. The ascent represents the distance, in pixels, of the tallest character above the baseline.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textAscent"
+    }
+
+    ,
+
+    {
+  "type": "p5_textdescent",
+  "message0": "textDescent",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Returns the descent of the current font at its current size. The descent represents the distance, in pixels, of the character with the longest descender below the baseline.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textDescent"
+    }
+
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 

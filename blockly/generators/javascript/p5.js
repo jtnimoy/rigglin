@@ -252,3 +252,14 @@ Blockly.JavaScript['p5_get_textwidth'] = function(block) {
     var code = 'P5.textWidth('+value_name+')';
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+
+Blockly.JavaScript['p5_textascent'] = function(block) {
+    var code = 'P5.textAscent()';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_textdescent'] = function(block) {
+  var code = 'P5.textDescent()';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
