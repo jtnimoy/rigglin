@@ -246,3 +246,9 @@ Blockly.JavaScript['p5_set_textstyle'] = function(block) {
     var code = 'P5.textStyle('+dropdown_style+');\n';
     return code;
 };
+
+Blockly.JavaScript['p5_get_textwidth'] = function(block) {
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
+    var code = 'P5.textWidth('+value_name+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};

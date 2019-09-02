@@ -670,6 +670,22 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Sets/gets the style of the text for system fonts to NORMAL, ITALIC, BOLD or BOLDITALIC. Note: this may be is overridden by CSS styling. For non-system fonts (opentype, truetype, etc.) please load styled fonts instead.",
   "helpUrl": "https://p5js.org/reference/#/p5/textStyle"
     }
+    ,
+    {
+  "type": "p5_get_textwidth",
+  "message0": "textWidth %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "String"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Calculates and returns the width of any character or text string.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textWidth"
+}
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
