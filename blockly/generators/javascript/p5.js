@@ -238,3 +238,11 @@ Blockly.JavaScript['p5_textsize'] = function(block) {
   var code = 'P5.textSize('+value_name+');\n';
   return code;
 };
+
+
+Blockly.JavaScript['p5_set_textstyle'] = function(block) {
+    var dropdown_style = block.getFieldValue('style');
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'P5.textStyle('+dropdown_style+');\n';
+    return code;
+};

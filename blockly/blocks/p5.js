@@ -635,6 +635,41 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Sets/gets the current font size. This size will be used in all subsequent calls to the text() function. Font size is measured in pixels.",
   "helpUrl": "https://p5js.org/reference/#/p5/textSize"
     }
+    ,
+
+    {
+  "type": "p5_set_textstyle",
+  "message0": "textStyle %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "style",
+      "options": [
+        [
+          "NORMAL",
+          "NORMAL"
+        ],
+        [
+          "ITALIC",
+          "ITALIC"
+        ],
+        [
+          "BOLD",
+          "BOLD"
+        ],
+        [
+          "BOLDITALIC",
+          "BOLDITALIC"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets/gets the style of the text for system fonts to NORMAL, ITALIC, BOLD or BOLDITALIC. Note: this may be is overridden by CSS styling. For non-system fonts (opentype, truetype, etc.) please load styled fonts instead.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textStyle"
+    }
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 
