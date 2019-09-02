@@ -60,86 +60,23 @@
 </div>
 
 <xml id="toolbox" style="display: none">
-  <category name="p5" colour="000">
-
-    <category name="Color" colour="220">
-      <block type="colour_picker"></block>
-      <block type="colour_random"></block>
-      <block type="colour_rgb"></block>
-      <block type="colour_blend"></block>
-      <block type="p5_createCanvas"></block>
-      <block type="p5_background"></block>
-      <block type="p5_stroke"></block>
-      <block type="p5_fill"></block>
-    </category>
-
-    <category name="Math" colour="220">
-      <block type="p5_dist"></block>
-      
-      
-      <category name="p5.Vector" colour="220">
-	<block type="p5_wantspvector"></block>
-	<block type="p5_createvector"></block>
-	<block type="p5_vector_get"></block>
-      </category>
-      
-      
-    </category>
-    
-    
-
-    <category name="Environment" colour="220">
-      <block type="p5_width"></block>
-      <block type="p5_height"></block>
-      <block type="p5_frameCount"></block>
-      <block type="p5_mouseX"></block>
-      <block type="p5_mouseY"></block>
-      <block type="p5_pmouseX"></block>
-      <block type="p5_pmouseY"></block>  
-    </category>
-
-       
-      <category name="Shape" colour="220">
-	<block type="p5_point"></block>
-	<block type="p5_line"></block>
-	<block type="p5_rect"></block>
-      </category>
-      
-      <category name="Structure" colour="220">
-	<block type="p5_setup"></block>
-	<block type="p5_draw"></block>
-      </category>
-
-      <category name="Typography" colour="220">
-	<block type="p5_text"></block>
-	<block type="p5_loadfont"></block>
-	<block type="p5_textfont"></block>
-      </category>
-
-      
+  
+  <category name="Color" colour="220">
+    <block type="colour_picker"></block>
+    <block type="colour_random"></block>
+    <block type="colour_rgb"></block>
+    <block type="colour_blend"></block>
+    <block type="p5_createCanvas"></block>
+    <block type="p5_background"></block>
+    <block type="p5_stroke"></block>
+    <block type="p5_fill"></block>
   </category>
-    
-  <category name="Controls" colour="210">
-    <block type="controls_if"></block>
-    <block type="controls_ifelse"></block>
-    <block type="controls_whileUntil"></block>
-    <block type="controls_repeat_ext"></block>
-    <block type="controls_repeat"></block>
-    <block type="controls_for"></block>
-    <block type="controls_forEach"></block>
-    <block type="controls_flow_statements"></block>
-  </category>
-  <category name="Logic" colour="210">
-    <block type="logic_compare"></block>
-    <block type="logic_operation"></block>
-    <block type="logic_negate"></block>
-    <block type="logic_boolean"></block>
-    <block type="logic_null"></block>
-    <block type="logic_ternary"></block>
-    
-  </category>
-  <category name="Math" colour="120">
-    
+  
+  <category name="Math" colour="220">
+    <block type="p5_dist"></block>
+    <block type="math_number">
+      <field name="NUM">0</field>
+    </block>
     <block type="math_number">
       <field name="NUM">42</field>
     </block>
@@ -156,7 +93,54 @@
     <block type="math_random_int"></block>
     <block type="math_random_float"></block>
     <block type="math_atan2"></block>
- </category>
+    
+    <category name="p5.Vector" colour="220">
+      <block type="p5_wantspvector"></block>
+      <block type="p5_createvector"></block>
+      <block type="p5_vector_get"></block>
+    </category>
+    
+    
+  </category>
+  
+  <category name="Procedures">
+    <block type="procedures_defnoreturn"></block>
+    <block type="procedures_defreturn"></block>
+    <block type="procedures_mutatorcontainer"></block>
+    <block type="procedures_mutatorarg"></block>
+    <block type="procedures_callnoreturn"></block>
+    <block type="procedures_callreturn"></block>
+    <block type="procedures_ifreturn"></block>
+  </category>
+  
+  <category name="Environment" colour="220">
+    <block type="p5_width"></block>
+    <block type="p5_height"></block>
+    <block type="p5_frameCount"></block>
+    <block type="p5_mouseX"></block>
+    <block type="p5_mouseY"></block>
+    <block type="p5_pmouseX"></block>
+    <block type="p5_pmouseY"></block>  
+  </category>
+  
+  
+  <category name="Shape" colour="220">
+    <block type="p5_point"></block>
+    <block type="p5_line"></block>
+    <block type="p5_rect"></block>
+  </category>
+  
+  <category name="Structure" colour="220">
+    <block type="p5_setup"></block>
+    <block type="p5_draw"></block>
+  </category>
+  
+  <category name="Typography" colour="220">
+    <block type="p5_text"></block>
+    <block type="p5_loadfont"></block>
+    <block type="p5_textfont"></block>
+  </category>
+  
   <category name="Text" colour="121">
     <block type="text_print"></block>
     <block type="text"></block>
@@ -175,10 +159,40 @@
     <block type="text_replace"></block>
     <block type="text_reverse"></block>
   </category>
+  
   <category name="Variables" colour="123">
     <block type="variables_get_dynamic"></block>
     <block type="variables_set_dynamic"></block>
   </category>
+  <category name="Lists" colour="123">
+    <block type="lists_create_empty"></block>
+    <block type="lists_repeat"></block>
+    <block type="lists_reverse"></block>
+    <block type="lists_isEmpty"></block>
+    <block type="lists_length"></block>
+  </category>
+  <category name="Controls" colour="121">
+    <block type="controls_if"></block>
+    <block type="controls_ifelse"></block>
+    <block type="controls_whileUntil"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="controls_repeat"></block>
+    <block type="controls_for"></block>
+    <block type="controls_forEach"></block>
+    <block type="controls_flow_statements"></block>
+  </category>
+  
+  <category name="Logic" colour="121">
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+  </category>
+  
+
+
 
 </xml>
 <style>
