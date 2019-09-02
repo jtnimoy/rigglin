@@ -594,8 +594,8 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "",
-  "helpUrl": ""
+  "tooltip": "Sets the current alignment for drawing text.",
+  "helpUrl": "https://p5js.org/reference/#/p5/textAlign"
 }
 
     ,
@@ -708,6 +708,92 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/textDescent"
     }
 
+
+    ,
+
+{
+  "type": "p5_font_textbounds",
+  "message0": "textBounds %1 font %2 line %3 x %4 y %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "font",
+      "check": "p5.Font",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "line",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Returns a tight bounding box for the given text string using this font (currently only supports single lines)",
+  "helpUrl": "https://p5js.org/reference/#/p5.Font/textBounds"
+}    
+
+    ,
+
+    {
+  "type": "p5_font_texttopoints",
+  "message0": "textToPoints %1 font %2 txt %3 x %4 y %5 fontsize %6",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "font",
+      "check": "p5.Font",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "txt",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "fontsize",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Computes an array of points following the path for specified text",
+  "helpUrl": "https://p5js.org/reference/#/p5.Font/textToPoints"
+}
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
 

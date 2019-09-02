@@ -263,3 +263,25 @@ Blockly.JavaScript['p5_textdescent'] = function(block) {
   var code = 'P5.textDescent()';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+
+Blockly.JavaScript['p5_font_textbounds'] = function(block) {
+    var value_font = Blockly.JavaScript.valueToCode(block, 'font', Blockly.JavaScript.ORDER_ATOMIC) || null;
+    var value_line = Blockly.JavaScript.valueToCode(block, 'line', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = value_font + '.textBounds('+value_line+','+value_x+','+value_y+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_font_texttopoints'] = function(block) {
+    var value_font = Blockly.JavaScript.valueToCode(block, 'font', Blockly.JavaScript.ORDER_ATOMIC) || null;
+    var value_txt = Blockly.JavaScript.valueToCode(block, 'txt', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_fontsize = Blockly.JavaScript.valueToCode(block, 'fontsize', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var code = value_font + '.textToPoints('+value_txt+','+value_x+','+value_y+','+value_fontsize+')';
+
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
