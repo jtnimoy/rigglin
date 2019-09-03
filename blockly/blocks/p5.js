@@ -37,7 +37,7 @@ Blockly.defineBlocksWithJsonArray([
     "nextStatement": null,
     "colour": 330,
     "tooltip": "create a canvas",
-    "helpUrl": "call this function to create a processing canvas"
+    "helpUrl": "https://p5js.org/reference/#/p5/createCanvas"
 }
     ,
     
@@ -55,7 +55,7 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": 230,
   "tooltip": "clear canvas with color",
-  "helpUrl": "clear canvas with color"
+  "helpUrl": "https://p5js.org/reference/#/p5/background"
 }    ,
     
 
@@ -83,7 +83,7 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": 330,
   "tooltip": "draw a point",
-  "helpUrl": "call this function to draw a point"
+  "helpUrl": "https://p5js.org/reference/#/p5/point"
 }
     ,
     
@@ -123,7 +123,7 @@ Blockly.defineBlocksWithJsonArray([
     "nextStatement": null,
     "colour": 330,
     "tooltip": "draw a line",
-    "helpUrl": "call this function to draw a line from x1,y1 to x2,y2"
+    "helpUrl": "https://p5js.org/reference/#/p5/line"
 }   
     ,
     {
@@ -131,8 +131,8 @@ Blockly.defineBlocksWithJsonArray([
 	"message0": "width",
 	"output": null,
 	"colour": 230,
-	"tooltip": "width of canvas",
-	"helpUrl": "width of canvas"
+	"tooltip": "System variable that stores the width of the drawing canvas.",
+	"helpUrl": "https://p5js.org/reference/#/p5/width"
     }
     ,
     {
@@ -140,18 +140,18 @@ Blockly.defineBlocksWithJsonArray([
 	"message0": "height",
 	"output": null,
 	"colour": 230,
-	"tooltip": "height of canvas",
-	"helpUrl": "height of canvas"
+	"tooltip": "System variable that stores the height of the drawing canvas.",
+	"helpUrl": "https://p5js.org/reference/#/p5/height"
     }
     
     ,
-        {
+    {
 	"type": "p5_frameCount",
 	"message0": "frameCount",
 	"output": null,
 	"colour": 230,
-	"tooltip": "number of frames since beginning of run",
-	"helpUrl": "number of frames since beginning of run"
+	"tooltip": "The system variable frameCount contains the number of frames that have been displayed since the program started.",
+	"helpUrl": "https://p5js.org/reference/#/p5/frameCount"
     }
     
     ,
@@ -160,8 +160,8 @@ Blockly.defineBlocksWithJsonArray([
 	"message0": "mouseX",
 	"output": null,
 	"colour": 230,
-	"tooltip": "horizontal component of mouse position",
-	"helpUrl": "horizontal component of mouse position"
+	"tooltip": "The system variable mouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the canvas.",
+	"helpUrl": "https://p5js.org/reference/#/p5/mouseX"
     }
     
     ,
@@ -170,8 +170,8 @@ Blockly.defineBlocksWithJsonArray([
 	"message0": "mouseY",
 	"output": null,
 	"colour": 230,
-	"tooltip": "vertical component of mouse position",
-	"helpUrl": "vertical component of mouse position"
+	"tooltip": "The system variable mouseY always contains the current vertical position of the mouse, relative to (0, 0) of the canvas. ",
+	"helpUrl": "https://p5js.org/reference/#/p5/mouseY"
     }
     
     ,
@@ -180,18 +180,18 @@ Blockly.defineBlocksWithJsonArray([
 	"message0": "pmouseX",
 	"output": null,
 	"colour": 230,
-	"tooltip": "previous horizontal component of mouse position",
-	"helpUrl": "previous horizontal component of mouse position"
+	"tooltip": "The system variable pmouseX always contains the horizontal position of the mouse or finger in the frame previous to the current frame, relative to (0, 0) of the canvas.",
+	"helpUrl": "https://p5js.org/reference/#/p5/pmouseX"
     }
     
     ,
-        {
+    {
 	"type": "p5_pmouseY",
 	"message0": "pmouseY",
 	"output": null,
 	"colour": 230,
-	"tooltip": "previous vertical component of mouse position",
-	"helpUrl": "previous vertical component of mouse position"
+	"tooltip": "The system variable pmouseY always contains the vertical position of the mouse or finger in the frame previous to the current frame, relative to (0, 0) of the canvas.",
+	"helpUrl": "https://p5js.org/reference/#/p5/pmouseY"
     }
     
     ,
@@ -208,8 +208,8 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "change stroke color",
-  "helpUrl": "change stroke color"
+	"tooltip": "Sets the color used to draw lines and borders around shapes.",
+  "helpUrl": "https://p5js.org/reference/#/p5/stroke"
 }
     ,
 
@@ -225,10 +225,10 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "change fill color",
-  "helpUrl": "change fill color"
+     "tooltip": "Sets the color used to fill shapes. For example, if you run fill(204, 102, 0), all shapes drawn after the fill command will be filled with the color orange.",
+     "helpUrl": "https://p5js.org/reference/#/p5/fill"
  }
-
+    
     ,
 
     {
@@ -244,8 +244,8 @@ Blockly.defineBlocksWithJsonArray([
 	    }
 	],
 	"colour": 230,
-	"tooltip": "setup event",
-	"helpUrl": "setup event"
+	"tooltip": "The setup() function is called once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. ",
+	"helpUrl": "https://p5js.org/reference/#/p5/setup"
     }
     
     ,
@@ -262,8 +262,8 @@ Blockly.defineBlocksWithJsonArray([
 	    }
 	],
 	"colour": 230,
-	"tooltip": "setup event",
-	"helpUrl": "setup event"
+	"tooltip": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. Note if noLoop() is called in setup(), draw() will still be executed once before stopping. draw() is called automatically and should never be called explicitly. ",
+	"helpUrl": "https://p5js.org/reference/#/p5/draw"
     }
     
     ,
@@ -302,8 +302,8 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "clear canvas with color",
-  "helpUrl": "clear canvas with color"
+  "tooltip": "Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted, however, may be changed with the rectMode() function. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/rect"
     }
     
     ,
@@ -342,8 +342,8 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": "Number",
   "colour": 230,
-  "tooltip": "calculate distance between two points",
-  "helpUrl": "calculate distance between two points"
+  "tooltip": "Calculates the distance between two points, in either two or three dimensions.",
+  "helpUrl": "https://p5js.org/reference/#/p5/dist"
     }
     ,
     {
@@ -359,7 +359,7 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "",
+  "tooltip": "debug object",
   "helpUrl": ""
 }
 
@@ -393,8 +393,8 @@ Blockly.defineBlocksWithJsonArray([
 	],
 	"output": "p5.Vector",
 	"colour": 230,
-	"tooltip": "create a new PVector",
-	"helpUrl": "create a new PVector"
+	"tooltip": "Creates a new p5.Vector (the datatype for storing vectors). This provides a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction.",
+	"helpUrl": "https://p5js.org/reference/#/p5/createVector"
     }
 
 
@@ -434,8 +434,8 @@ Blockly.defineBlocksWithJsonArray([
   "inputsInline": true,
   "output": null,
   "colour": 230,
-  "tooltip": "get a component of a p5.Vector",
-  "helpUrl": "get a component of a p5.Vector"
+  "tooltip": "The x, y, or z component of the vector",
+  "helpUrl": "https://p5js.org/reference/#/p5.Vector/x"
     }
     
     ,
@@ -468,8 +468,8 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "render text on the canvas",
-  "helpUrl": "render text on the canvas"
+	"tooltip": "Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters.",
+  "helpUrl": "https://p5js.org/reference/#/p5/text"
     }
 
     ,
@@ -521,8 +521,8 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": "p5.Font",
   "colour": 230,
-  "tooltip": "load a font file",
-  "helpUrl": "load a font file"
+  "tooltip": "Loads an opentype font file (.otf, .ttf) from a file or a URL, and returns a PFont Object. This method is asynchronous, meaning it may not finish before the next line in your sketch is executed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/loadFont"
 }
     ,
     {
@@ -538,8 +538,8 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 230,
-  "tooltip": "change the font of the rendered text",
-  "helpUrl": "change the font of the rendered text"
+  "tooltip": "Sets the current font that will be drawn with the text() function. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/textFont"
 }
     ,
 
