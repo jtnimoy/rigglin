@@ -19,9 +19,7 @@ Blockly.JavaScript['p5_createCanvas'] = function(block) {
 
 Blockly.JavaScript['p5_background'] = function(block) {
     var value_color = Blockly.JavaScript.valueToCode(block,'color',Blockly.JavaScript.ORDER_ATOMIC) || '\'#000000\'';
-    console.log( value_color );
     var code = 'P5.background(' + value_color +  ');\n';
-    console.log( code );
     return code;
 };
 
@@ -190,7 +188,6 @@ Blockly.JavaScript['p5_loadfont'] = function(block) {
     var dropdown_name = block.getFieldValue('NAME');
     var value_url = Blockly.JavaScript.valueToCode(block, 'url', Blockly.JavaScript.ORDER_ATOMIC);
 
-    console.log(value_url);
     var code;
     if(value_url){
 	code = 'P5.loadFont(' + value_url + ')';
@@ -204,8 +201,6 @@ Blockly.JavaScript['p5_textfont'] = function(block) {
   var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || '\'\'';
   // TODO: Assemble JavaScript into code variable.
     var code = 'P5.textFont('+value_name+');\n';
-    console.log(code);
-    console.log(value_name);
   return code;
 };
 
@@ -217,7 +212,6 @@ Blockly.JavaScript['p5_textalign'] = function(block) {
     var dropdown_vertalign = block.getFieldValue('vertAlign');
     // TODO: Assemble JavaScript into code variable.
     var code = 'P5.textAlign('+dropdown_horizalign+','+dropdown_vertalign+');\n';
-    console.log(code);
     return code;
 };
 
