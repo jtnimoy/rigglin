@@ -447,6 +447,8 @@ if (--window.LoopTrap == 0) \
       sketch.setup = () => {
 	  sketch.createCanvas(P5_WIDTH,P5_HEIGHT);
 	  sketch.background(255);
+	  
+	  sketch.setup = 0;
       };
       
       sketch.draw = () => {
