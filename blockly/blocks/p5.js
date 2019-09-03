@@ -49,7 +49,6 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "color",
-      "check": "Colour"
     }
   ],
   "previousStatement": null,
@@ -204,7 +203,6 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "color",
-      "check": "Colour"
     }
   ],
   "previousStatement": null,
@@ -222,7 +220,6 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "color",
-      "check": "Colour"
     }
   ],
   "previousStatement": null,
@@ -805,6 +802,107 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Clears the pixels within a buffer. This function only clears the canvas. ",
   "helpUrl": "https://p5js.org/reference/#/p5/clear"
     }
+    ,
+
+    {
+  "type": "p5_colormode",
+  "message0": "colorMode %1 with max %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "RGB",
+          "RGB"
+        ],
+        [
+          "HSB",
+          "HSB"
+        ],
+        [
+          "HSL",
+          "HSL"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "mode",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "colorMode() changes the way p5.js interprets color data.",
+  "helpUrl": "https://p5js.org/reference/#/p5/colorMode"
+    }
+
+    ,
+
+    {
+  "type": "p5_nofill",
+  "message0": "noFill",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Disables filling geometry. If both noStroke() and noFill() are called, nothing will be drawn to the screen.",
+  "helpUrl": "https://p5js.org/reference/#/p5/noFill"
+    }
+
+    ,
+
+    {
+  "type": "p5_nostroke",
+  "message0": "noStroke",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Disables drawing the stroke (outline). If both noStroke() and noFill() are called, nothing will be drawn to the screen.",
+  "helpUrl": "https://p5js.org/reference/#/p5/noStroke"
+    }
+
+    ,
+
+    {
+  "type": "p5_color",
+  "message0": "color %1 a %2 b %3 c %4 d %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "a",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "b",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "c",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "d",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "p5.Color",
+  "colour": 230,
+  "tooltip": "Creates colors for storing in variables of the color datatype. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/color"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

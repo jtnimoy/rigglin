@@ -292,3 +292,31 @@ Blockly.JavaScript['p5_clear'] = function(block) {
   var code = 'P5.clear();\n';
   return code;
 };
+
+Blockly.JavaScript['p5_colormode'] = function(block) {
+    var dropdown_mode = block.getFieldValue('mode');
+    var value_mode = Blockly.JavaScript.valueToCode(block, 'mode', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.colorMode('+dropdown_mode+','+value_mode+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_nofill'] = function(block) {
+    var code = 'P5.noFill();\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_nostroke'] = function(block) {
+    var code = 'P5.noStroke();\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_color'] = function(block) {
+    var value_a = Blockly.JavaScript.valueToCode(block, 'a', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_b = Blockly.JavaScript.valueToCode(block, 'b', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_c = Blockly.JavaScript.valueToCode(block, 'c', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_d = Blockly.JavaScript.valueToCode(block, 'd', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.color('+value_a+','+value_b+','+value_c+','+value_d+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
