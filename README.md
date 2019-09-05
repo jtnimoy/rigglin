@@ -12,6 +12,8 @@ control can also be provided through additional implementation, but
 both should be available. One for ease of use, and one for advanced
 control.
 
+Take basic tutorial at https://medium.com/@jtnimoy/introducing-rigglin-b849eca30cb6
+
 ![](screenshot2.png)
 
 
