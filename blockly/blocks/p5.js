@@ -903,6 +903,309 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/color"
     }
 
+    ,
+
+    {
+  "type": "p5_alpha",
+  "message0": "alpha %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Extracts the alpha value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/alpha"
+}
+    ,
+
+    {
+  "type": "p5_blue",
+  "message0": "blue %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Extracts the blue value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/blue"
+    }
+
+    ,
+
+    {
+  "type": "p5_brightness",
+  "message0": "brightness %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Extracts the HSB brightness value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/brightness"
+    }
+
+    ,
+
+    {
+  "type": "p5_green",
+  "message0": "green %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Extracts the green value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/green"
+}
+    ,
+
+    {
+  "type": "p5_hue",
+  "message0": "hue %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Extracts the hue value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/hue"
+    }
+
+    ,
+
+    {
+  "type": "p5_lerpcolor",
+  "message0": "lerpColor %1 color1 %2 color2 %3 amt %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "color1",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "color2",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "amt",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "Blends two colors to find a third color somewhere between them.",
+  "helpUrl": "https://p5js.org/reference/#/p5/lerpColor"
+    }
+
+    ,
+
+    {
+  "type": "p5_lightness",
+  "message0": "lightness %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Number: the lightness",
+  "helpUrl": "https://p5js.org/reference/#/p5/lightness"
+}
+
+
+    ,
+
+    {
+  "type": "p5_red",
+  "message0": "red %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Extracts the red value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/red"
+}
+
+    ,
+
+    {
+  "type": "p5_saturation",
+  "message0": "saturation %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Extracts the saturation value from a color or pixel array.",
+  "helpUrl": "https://p5js.org/reference/#/p5/saturation"
+    }
+
+    ,
+
+    {
+  "type": "p5_color_tostring",
+  "message0": "color %1 toString with format %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "p5.Color"
+    },
+    {
+      "type": "input_value",
+      "name": "format",
+      "check": "String"
+    }
+  ],
+	"inputsInline": true,
+  "output": "String",
+  "colour": 230,
+  "tooltip": "This function returns the color formatted as a string. This can be useful for debugging, or for using p5.js with other libraries.",
+  "helpUrl": "https://p5js.org/reference/#/p5.Color/toString"
+    }
+    ,
+
+    {
+  "type": "p5_color_set",
+  "message0": "color %1 %2 %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "p5.Color"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "func",
+      "options": [
+        [
+          "setRed",
+          "setRed"
+        ],
+        [
+          "setGreen",
+          "setGreen"
+        ],
+        [
+          "setBlue",
+          "setBlue"
+        ],
+        [
+          "setAlpha",
+          "setAlpha"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "num",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "set a color channel to a value",
+  "helpUrl": "https://p5js.org/reference/#/p5.Color/setRed"
+    }
+
+    ,
+
+    {
+  "type": "p5_quad",
+  "message0": "quad %1 x1 %2 y1 %3 x2 %4 y2 %5 x3 %6 y3 %7 x4 %8 y4 %9",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x3",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y3",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x4",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y4",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, but the angles between its edges are not constrained to ninety degrees.",
+  "helpUrl": "https://p5js.org/reference/#/p5/quad"
+    }
+
+    
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
