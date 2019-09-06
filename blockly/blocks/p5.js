@@ -1205,7 +1205,240 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/quad"
     }
 
-    
+    ,
+
+    {
+  "type": "p5_circle",
+  "message0": "circle %1 x %2 y %3 d %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "d",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draws a circle to the screen. A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/circle"
+    }
+
+    ,
+
+    {
+  "type": "p5_ellipse",
+  "message0": "ellipse %1 x %2 y %3 w %4 h %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle.",
+  "helpUrl": "https://p5js.org/reference/#/p5/ellipse"
+    }
+
+    ,
+
+    {
+  "type": "p5_arc",
+  "message0": "arc %1 x %2 y %3 w %4 h %5 start %6 stop %7 %8",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "start",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "stop",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "CHORD",
+          "CHORD"
+        ],
+        [
+          "PIE",
+          "PIE"
+        ],
+        [
+          "OPEN",
+          "OPEN"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draw an arc to the screen. If called with only x, y, w, h, start, and stop, the arc will be drawn and filled as an open pie segment.",
+  "helpUrl": "https://p5js.org/reference/#/p5/arc"
+    }
+
+    ,
+
+    {
+  "type": "p5_square",
+  "message0": "square %1 x %2 y %3 s %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "s",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draws a square to the screen. A square is a four-sided shape with every angle at ninety degrees, and equal side size.",
+  "helpUrl": "https://p5js.org/reference/#/p5/square"
+    }
+    ,
+
+    {
+  "type": "p5_triangle",
+  "message0": "triangle %1 x1 %2 y1 %3 x2 %4 y2 %5 x3 %6 y3 %7",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y1",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x3",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y3",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point.",
+  "helpUrl": "https://p5js.org/reference/#/p5/triangle"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

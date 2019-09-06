@@ -397,3 +397,54 @@ Blockly.JavaScript['p5_quad'] = function(block) {
     var code = 'P5.quad('+value_x1+','+value_y1+','+value_x2+','+value_y2+','+value_x3+','+value_y3+','+value_x4+','+value_y4+');\n';
     return code;
 };
+
+Blockly.JavaScript['p5_circle'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_d = Blockly.JavaScript.valueToCode(block, 'd', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.circle('+value_x + ',' + value_y + ',' + value_d+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_ellipse'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_w = Blockly.JavaScript.valueToCode(block, 'w', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_h = Blockly.JavaScript.valueToCode(block, 'h', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.ellipse('+value_x + ',' + value_y + ',' + value_w + ',' + value_h+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_arc'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_w = Blockly.JavaScript.valueToCode(block, 'w', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_h = Blockly.JavaScript.valueToCode(block, 'h', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_start = Blockly.JavaScript.valueToCode(block, 'start', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_stop = Blockly.JavaScript.valueToCode(block, 'stop', Blockly.JavaScript.ORDER_ATOMIC);
+    var dropdown_mode = block.getFieldValue('mode');
+    var code = 'P5.arc('+value_x+','+value_y+','+value_w+','+value_h+','+value_start+','+value_stop+','+dropdown_mode+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_square'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_s = Blockly.JavaScript.valueToCode(block, 's', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.square('+value_x+','+value_y+','+value_s+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_triangle'] = function(block) {
+  var value_x1 = Blockly.JavaScript.valueToCode(block, 'x1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y1 = Blockly.JavaScript.valueToCode(block, 'y1', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x2 = Blockly.JavaScript.valueToCode(block, 'x2', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y2 = Blockly.JavaScript.valueToCode(block, 'y2', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_x3 = Blockly.JavaScript.valueToCode(block, 'x3', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_y3 = Blockly.JavaScript.valueToCode(block, 'y3', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.triangle('+value_x1 + ',' + value_y1 + ',' + value_x2 + ',' + value_y2 + ',' + value_x3 + ',' + value_y3+');\n';
+    return code;
+};
+
