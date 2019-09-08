@@ -490,3 +490,35 @@ Blockly.JavaScript['p5_constant'] = function(block) {
     var code = 'P5.'+dropdown_which;
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
+
+
+Blockly.JavaScript['p5_vertex'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var value_z = Blockly.JavaScript.valueToCode(block, 'z', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var code = 'P5.vertex('+value_x+','+value_y+','+value_z+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_beginshape'] = function(block) {
+  var dropdown_how = block.getFieldValue('how');
+    var code = 'P5.beginShape('+dropdown_how+');\n';
+  return code;
+};
+
+
+Blockly.JavaScript['p5_endshape'] = function(block) {
+    var dropdown_name = block.getFieldValue('NAME');
+    var code = 'P5.endShape('+dropdown_name+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_curvevertex'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var value_z = Blockly.JavaScript.valueToCode(block, 'z', Blockly.JavaScript.ORDER_ATOMIC)||0;
+    var code = 'P5.curveVertex('+value_x+','+value_y+','+value_z+');\n';
+    return code;
+};

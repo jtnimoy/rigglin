@@ -1587,6 +1587,156 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "For example, HALF_PI is a mathematical constant with the value 1.57079632679489661923.",
   "helpUrl": "https://p5js.org/reference/#/p5/HALF_PI"
     }
+    ,
+
+    {
+  "type": "p5_vertex",
+  "message0": "vertex %1 x %2 y %3 z %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "All shapes are constructed by connecting a series of vertices. vertex() is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons. It is used exclusively within the beginShape() and endShape() functions.",
+  "helpUrl": "https://p5js.org/reference/#/p5/vertex"
+    }
+    ,
+
+    {
+  "type": "p5_beginshape",
+  "message0": "beginShape %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "how",
+      "options": [
+        [
+          "null",
+          "null"
+        ],
+        [
+          "POINTS",
+          "POINTS"
+        ],
+        [
+          "LINES",
+          "LINES"
+        ],
+        [
+          "TRIANGLES",
+          "TRIANGLES"
+        ],
+        [
+          "TRIANGLE_FAN",
+          "TRIANGLE_FAN"
+        ],
+        [
+          "TRIANGLE_STRIP",
+          "TRIANGLE_STRIP"
+        ],
+        [
+          "QUADS",
+          "QUADS"
+        ],
+        [
+          "QUAD_STRIP",
+          "QUAD_STRIP"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Using the beginShape() and endShape() functions allow creating more complex forms. beginShape() begins recording vertices for a shape and endShape() stops recording. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/beginShape"
+    }
+
+
+    ,
+
+    {
+  "type": "p5_endshape",
+  "message0": "endShape %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "CLOSE",
+          "CLOSE"
+        ],
+        [
+          "null",
+          "null"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "The endShape() function is the companion to beginShape() and may only be called after beginShape(). ",
+  "helpUrl": "https://p5js.org/reference/#/p5/endShape"
+    }
+
+    ,
+
+    {
+  "type": "p5_curvevertex",
+  "message0": "curveVertex %1 x %2 y %3 z %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Specifies vertex coordinates for curves. This function may only be used between beginShape() and endShape() and only when there is no MODE parameter specified to beginShape().",
+  "helpUrl": "https://p5js.org/reference/#/p5/curveVertex"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
