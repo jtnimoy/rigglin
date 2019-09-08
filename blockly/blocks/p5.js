@@ -1207,6 +1207,7 @@ Blockly.defineBlocksWithJsonArray([
 
     ,
 
+    /*
     {
   "type": "p5_circle",
   "message0": "circle %1 x %2 y %3 d %4",
@@ -1241,7 +1242,8 @@ Blockly.defineBlocksWithJsonArray([
     }
 
     ,
-
+    */
+    
     {
   "type": "p5_ellipse",
   "message0": "ellipse %1 x %2 y %3 w %4 h %5",
@@ -1439,6 +1441,152 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/triangle"
     }
 
+    ,
+
+    {
+  "type": "p5_rotate",
+  "message0": "rotate %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Rotates a shape the amount specified by the angle parameter. This function accounts for angleMode, so angles can be entered in either RADIANS or DEGREES. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/rotate"
+}
+
+
+    ,
+
+    {
+  "type": "p5_scale",
+  "message0": "scale s %1 y %2 z %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "s",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Increases or decreases the size of a shape by expanding and contracting vertices. Objects always scale from their relative origin to the coordinate system. Scale values are specified as decimal percentages.",
+  "helpUrl": "https://p5js.org/reference/#/p5/scale"
+    }
+
+    ,
+
+    {
+  "type": "p5_translate",
+  "message0": "translate %1 x %2 y %3 z %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Specifies an amount to displace objects within the display window. The x parameter specifies left/right translation, the y parameter specifies up/down translation. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/translate"
+    }
+
+    ,
+
+    {
+  "type": "p5_push",
+  "message0": "push",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "The push() function saves the current drawing style settings and transformations, while pop() restores these settings. Note that these functions are always used together. They allow you to change the style and transformation settings and later return to what you had.",
+  "helpUrl": "https://p5js.org/reference/#/p5/push"
+}
+    ,
+
+    {
+  "type": "p5_pop",
+  "message0": "pop",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "The push() function saves the current drawing style settings and transformations, while pop() restores these settings. Note that these functions are always used together.",
+  "helpUrl": "https://p5js.org/reference/#/p5/pop"
+}
+
+    ,
+
+    {
+  "type": "p5_constant",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "which",
+      "options": [
+        [
+          "HALF_PI",
+          "HALF_PI"
+        ],
+        [
+          "PI",
+          "PI"
+        ],
+        [
+          "QUARTER_PI",
+          "QUARTER_PI"
+        ],
+        [
+          "TAU",
+          "TAU"
+        ],
+        [
+          "TWO_PI",
+          "TWO_PI"
+        ]
+      ]
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "For example, HALF_PI is a mathematical constant with the value 1.57079632679489661923.",
+  "helpUrl": "https://p5js.org/reference/#/p5/HALF_PI"
+    }
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

@@ -398,6 +398,7 @@ Blockly.JavaScript['p5_quad'] = function(block) {
     return code;
 };
 
+/*
 Blockly.JavaScript['p5_circle'] = function(block) {
     var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
     var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
@@ -405,6 +406,7 @@ Blockly.JavaScript['p5_circle'] = function(block) {
     var code = 'P5.circle('+value_x + ',' + value_y + ',' + value_d+');\n';
     return code;
 };
+*/
 
 Blockly.JavaScript['p5_ellipse'] = function(block) {
     var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
@@ -448,3 +450,43 @@ Blockly.JavaScript['p5_triangle'] = function(block) {
     return code;
 };
 
+
+Blockly.JavaScript['p5_rotate'] = function(block) {
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.rotate('+value_name+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_scale'] = function(block) {
+    var value_s = Blockly.JavaScript.valueToCode(block, 's', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_z = Blockly.JavaScript.valueToCode(block, 'z', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.scale('+value_s+','+value_y+','+value_z+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_translate'] = function(block) {
+    var value_x = Blockly.JavaScript.valueToCode(block, 'x', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_y = Blockly.JavaScript.valueToCode(block, 'y', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_z = Blockly.JavaScript.valueToCode(block, 'z', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.translate('+value_x+','+value_y+','+value_z+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_push'] = function(block) {
+    var code = 'P5.push();\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_pop'] = function(block) {
+    var code = 'P5.pop();\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_constant'] = function(block) {
+    var dropdown_which = block.getFieldValue('which');
+    var code = 'P5.'+dropdown_which;
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
