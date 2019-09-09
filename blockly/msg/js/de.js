@@ -218,7 +218,7 @@ Blockly.Msg["MATH_CONSTANT_TOOLTIP"] = "Mathematische Konstanten wie: π (3.141�
 Blockly.Msg["MATH_CONSTRAIN_HELPURL"] = "https://en.wikipedia.org/wiki/Clamping_(graphics)";  // untranslated
 Blockly.Msg["MATH_CONSTRAIN_TITLE"] = "begrenze %1 zwischen %2 und %3";
 Blockly.Msg["MATH_CONSTRAIN_TOOLTIP"] = "Begrenzt eine Zahl auf den Wertebereich zwischen zwei anderen Zahlen (inklusiv).";
-Blockly.Msg["MATH_DIVISION_SYMBOL"] = "÷";  // untranslated
+Blockly.Msg["MATH_DIVISION_SYMBOL"] = "/";  // untranslated
 Blockly.Msg["MATH_IS_DIVISIBLE_BY"] = "ist teilbar durch";
 Blockly.Msg["MATH_IS_EVEN"] = "ist gerade";
 Blockly.Msg["MATH_IS_NEGATIVE"] = "ist negativ";
@@ -230,7 +230,7 @@ Blockly.Msg["MATH_IS_WHOLE"] = "ist eine ganze Zahl";
 Blockly.Msg["MATH_MODULO_HELPURL"] = "https://de.wikipedia.org/wiki/Modulo";
 Blockly.Msg["MATH_MODULO_TITLE"] = "Rest von %1 ÷ %2";
 Blockly.Msg["MATH_MODULO_TOOLTIP"] = "Der Rest nach einer Division.";
-Blockly.Msg["MATH_MULTIPLICATION_SYMBOL"] = "×";  // untranslated
+Blockly.Msg["MATH_MULTIPLICATION_SYMBOL"] = "*";  // untranslated
 Blockly.Msg["MATH_NUMBER_HELPURL"] = "https://de.wikipedia.org/wiki/Zahl";
 Blockly.Msg["MATH_NUMBER_TOOLTIP"] = "Eine Zahl.";
 Blockly.Msg["MATH_ONLIST_HELPURL"] = "http://www.sysplus.ch/einstieg.php?links=menu&seite=4125&grad=Crash&prog=Excel";

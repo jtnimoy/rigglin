@@ -371,9 +371,9 @@ Blockly.Msg.MATH_ADDITION_SYMBOL = '+';
 Blockly.Msg.MATH_SUBTRACTION_SYMBOL = '-';
 /// {{Optional}} math - The binary operation indicating that the left operand should be divided by
 /// the right operand.
-Blockly.Msg.MATH_DIVISION_SYMBOL = '÷';
+Blockly.Msg.MATH_DIVISION_SYMBOL = '/';
 /// {{Optional}} math - The symbol for the binary operation multiplication.
-Blockly.Msg.MATH_MULTIPLICATION_SYMBOL = '×';
+Blockly.Msg.MATH_MULTIPLICATION_SYMBOL = '*';
 /// {{Optional}} math - The symbol for the binary operation exponentiation.  Specifically, if the
 /// value of the left operand is L and the value of the right operand (the exponent) is
 /// R, multiply L by itself R times.  (Fractional and negative exponents are also legal.)
@@ -530,7 +530,7 @@ Blockly.Msg.MATH_ONLIST_TOOLTIP_RANDOM = 'Return a random element from the list.
 /// {{Optional}} url - information about the modulo (remainder) operation.
 Blockly.Msg.MATH_MODULO_HELPURL = 'https://en.wikipedia.org/wiki/Modulo_operation';
 /// block text - Title of block providing the remainder when dividing the first numerical input by the second.  For example, the remainder of 10 divided by 3 is 1.\n\nParameters:\n* %1 - the dividend (10, in our example)\n* %2 - the divisor (3 in our example).
-Blockly.Msg.MATH_MODULO_TITLE = 'remainder of %1 ÷ %2';
+Blockly.Msg.MATH_MODULO_TITLE = 'remainder of %1 / %2';
 /// tooltip - For example, the remainder of 10 divided by 3 is 1.
 Blockly.Msg.MATH_MODULO_TOOLTIP = 'Return the remainder from dividing the two numbers.';
 
