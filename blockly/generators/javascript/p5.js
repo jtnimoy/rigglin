@@ -522,3 +522,10 @@ Blockly.JavaScript['p5_curvevertex'] = function(block) {
     var code = 'P5.curveVertex('+value_x+','+value_y+','+value_z+');\n';
     return code;
 };
+
+
+Blockly.JavaScript['p5_ellipsemode'] = function(block) {
+    var dropdown_name = block.getFieldValue('NAME');
+    var code = 'P5.ellipseMode('+dropdown_name+');\n';
+    return code;
+};

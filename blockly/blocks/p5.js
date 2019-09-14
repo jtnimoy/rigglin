@@ -1737,6 +1737,42 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/curveVertex"
     }
 
+    ,
+
+    {
+  "type": "p5_ellipsemode",
+  "message0": "ellipseMode %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "CENTER",
+          "CENTER"
+        ],
+        [
+          "RADIUS",
+          "RADIUS"
+        ],
+        [
+          "CORNER",
+          "CORNER"
+        ],
+        [
+          "CORNERS",
+          "CORNERS"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Modifies the location from which ellipses are drawn by changing the way in which parameters given to ellipse() are interpreted.",
+  "helpUrl": "https://p5js.org/reference/#/p5/ellipseMode"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
