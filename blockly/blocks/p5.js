@@ -1773,6 +1773,153 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/ellipseMode"
     }
 
+    ,
+
+    {
+  "type": "p5_nosmooth",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "noSmooth",
+          "noSmooth"
+        ],
+        [
+          "smooth",
+          "smooth"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Draws all geometry with jagged (aliased) edges. Note that smooth() is active by default in 2D mode, so it is necessary to call noSmooth() to disable smoothing of geometry, images, and fonts.",
+  "helpUrl": "https://p5js.org/reference/#/p5/noSmooth"
+    }
+
+    ,
+
+    {
+  "type": "p5_rectmode",
+  "message0": "rectMode %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "CORNER",
+          "CORNER"
+        ],
+        [
+          "CORNERS",
+          "CORNERS"
+        ],
+        [
+          "CENTER",
+          "CENTER"
+        ],
+        [
+          "RADIUS",
+          "RADIUS"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Modifies the location from which rectangles are drawn by changing the way in which parameters given to rect() are interpreted.",
+  "helpUrl": "https://p5js.org/reference/#/p5/rectMode"
+    }
+
+    ,
+
+    {
+  "type": "p5_strokecap",
+  "message0": "strokeCap %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "ROUND",
+          "ROUND"
+        ],
+        [
+          "SQUARE",
+          "SQUARE"
+        ],
+        [
+          "PROJECT",
+          "PROJECT"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets the style for rendering line endings. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/strokeCap"
+    }
+
+    ,
+
+    {
+  "type": "p5_strokejoin",
+  "message0": "strokeJoin %1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "MITER",
+          "MITER"
+        ],
+        [
+          "BEVEL",
+          "BEVEL"
+        ],
+        [
+          "ROUND",
+          "ROUND"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets the style of the joints which connect line segments. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/strokeJoin"
+    }
+
+    ,
+
+    {
+  "type": "p5_strokeweight",
+  "message0": "strokeWeight %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "val",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.",
+  "helpUrl": "https://p5js.org/reference/#/p5/strokeWeight"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

@@ -529,3 +529,34 @@ Blockly.JavaScript['p5_ellipsemode'] = function(block) {
     var code = 'P5.ellipseMode('+dropdown_name+');\n';
     return code;
 };
+
+Blockly.JavaScript['p5_nosmooth'] = function(block) {
+    var dropdown_name = block.getFieldValue('NAME');
+    var code = 'P5.'+dropdown_name+'();\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_rectmode'] = function(block) {
+    var dropdown_mode = block.getFieldValue('mode');
+    var code = 'P5.rectMode('+dropdown_mode+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_strokecap'] = function(block) {
+    var dropdown_mode = block.getFieldValue('mode');
+    var code = 'P5.strokeCap(' + dropdown_mode + ');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_strokejoin'] = function(block) {
+    var dropdown_mode = block.getFieldValue('mode');
+    var code = 'P5.strokeJoin('+dropdown_mode+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_strokeweight'] = function(block) {
+    var value_val = Blockly.JavaScript.valueToCode(block, 'val', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.strokeWeight('+value_val+');\n';
+    return code;
+};
