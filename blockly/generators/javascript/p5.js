@@ -582,3 +582,28 @@ Blockly.JavaScript['p5_bezier'] = function(block) {
 	');\n';
     return code;
 };
+
+
+Blockly.JavaScript['p5_curve'] = function(block) {
+    var value_x1 = Blockly.JavaScript.valueToCode(block, 'x1', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y1 = Blockly.JavaScript.valueToCode(block, 'y1', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x2 = Blockly.JavaScript.valueToCode(block, 'x2', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y2 = Blockly.JavaScript.valueToCode(block, 'y2', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x3 = Blockly.JavaScript.valueToCode(block, 'x3', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y3 = Blockly.JavaScript.valueToCode(block, 'y3', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_x4 = Blockly.JavaScript.valueToCode(block, 'x4', Blockly.JavaScript.ORDER_ATOMIC);
+    var value_y4 = Blockly.JavaScript.valueToCode(block, 'y4', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.curve(' +
+	value_x1 + ',' +
+	value_y1 + ',' +
+	value_x2 + ',' +
+	value_y2 + ',' +
+	value_x3 + ',' +
+	value_y3 + ',' +
+	value_x4 + ',' +
+	value_y4 +
+	');\n';
+    return code;
+};
+
+
