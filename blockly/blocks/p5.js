@@ -2116,6 +2116,22 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/keyPressed"
     }
 
+    ,
+
+    {
+  "type": "p5_keyreleased",
+  "message0": "keyReleased %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The keyReleased() function is called once every time a key is released.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyReleased"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

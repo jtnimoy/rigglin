@@ -633,3 +633,9 @@ Blockly.JavaScript['p5_keypressed'] = function(block) {
     var code = 'P5.keyPressed = function() {\n'+statements_name+'};\n';
     return code;
 };
+
+Blockly.JavaScript['p5_keyreleased'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.keyReleased = function(){\n' + statements_name + '};\n';
+    return code;
+};
