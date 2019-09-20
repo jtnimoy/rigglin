@@ -2049,6 +2049,73 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Draws a curved line on the screen between two points, given as the middle four parameters.",
   "helpUrl": "https://p5js.org/reference/#/p5/curve"
     }
+    ,
+
+    {
+  "type": "p5_deltatime",
+  "message0": "deltaTime",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable deltaTime contains the time difference between the beginning of the previous frame and the beginning of the current frame in milliseconds.",
+  "helpUrl": "https://p5js.org/reference/#/p5/deltaTime"
+    }
+
+    ,
+
+    {
+  "type": "p5_focused",
+  "message0": "focused",
+  "output": null,
+  "colour": 230,
+  "tooltip": "Confirms if the window a p5.js program is in is \"focused,\" meaning that the sketch will accept mouse or keyboard input. This variable is \"true\" if the window is focused and \"false\" if not.",
+  "helpUrl": "https://p5js.org/reference/#/p5/focused"
+    }
+
+    ,
+
+    {
+  "type": "p5_framerate",
+  "message0": "frameRate %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "rate",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Specifies the number of frames to be displayed every second.",
+  "helpUrl": "https://p5js.org/reference/#/p5/frameRate"
+    }
+    ,
+
+    {
+  "type": "p5_framerate_get",
+  "message0": "frameRate",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "https://p5js.org/reference/#/p5/frameRate",
+  "helpUrl": "https://p5js.org/reference/#/p5/frameRate"
+    }
+
+    ,
+
+    {
+  "type": "p5_keypressed",
+  "message0": "keyPressed %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The keyPressed() function is called once every time a key is pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyPressed"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

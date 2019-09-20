@@ -124,7 +124,6 @@ Blockly.JavaScript['p5_pmouseY'] = function(block) {
 
 Blockly.JavaScript['p5_setup'] = function(block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
-    // TODO: Assemble JavaScript into code variable.
     var code = 'P5.setup = function() {\n' + statements_name + '};\n';
     return code;
 };
@@ -607,3 +606,30 @@ Blockly.JavaScript['p5_curve'] = function(block) {
 };
 
 
+Blockly.JavaScript['p5_deltatime'] = function(block) {
+  var code = 'P5.deltaTime';
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['p5_focused'] = function(block) {
+    var code = 'P5.focused';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.JavaScript['p5_framerate'] = function(block) {
+    var value_rate = Blockly.JavaScript.valueToCode(block, 'rate', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.frameRate('+value_rate+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_framerate_get'] = function(block) {
+    var code = 'P5.frameRate()';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+
+Blockly.JavaScript['p5_keypressed'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.keyPressed = function() {\n'+statements_name+'};\n';
+    return code;
+};
