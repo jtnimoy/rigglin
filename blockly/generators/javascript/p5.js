@@ -639,3 +639,15 @@ Blockly.JavaScript['p5_keyreleased'] = function(block) {
     var code = 'P5.keyReleased = function(){\n' + statements_name + '};\n';
     return code;
 };
+
+Blockly.JavaScript['p5_keytyped'] = function(block) {
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  var code = 'P5.keyTyped = function(){\n' + statements_name + '};\n';
+  return code;
+};
+
+Blockly.JavaScript['p5_keyisdown'] = function(block) {
+    var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.keyIsDown('+value_name+')';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};

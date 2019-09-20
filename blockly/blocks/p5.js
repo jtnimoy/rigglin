@@ -2132,6 +2132,41 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/keyReleased"
     }
 
+    ,
+
+    {
+  "type": "p5_keytyped",
+  "message0": "keyTyped %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The keyTyped() function is called once every time a key is pressed, but action keys such as Backspace, Delete, Ctrl, Shift, and Alt are ignored.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyTyped"
+    }
+
+    ,
+
+    {
+  "type": "p5_keyisdown",
+  "message0": "keyIsDown %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "Number"
+    }
+  ],
+  "output": "Boolean",
+  "colour": 230,
+  "tooltip": "The keyIsDown() function checks if the key is currently down, i.e. pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyIsDown"
+}
+
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
