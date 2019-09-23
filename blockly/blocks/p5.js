@@ -2200,6 +2200,69 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/keyIsPressed"
     }
 
+    ,
+
+    {
+  "type": "p5_noloop",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "noLoop",
+          "noLoop"
+        ],
+        [
+          "loop",
+          "loop"
+        ]
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Stops p5.js from continuously executing the code within draw(). If loop() is called, the code in draw() begins to run continuously again.",
+  "helpUrl": "https://p5js.org/reference/#/p5/noLoop"
+    }
+
+    ,
+
+{
+  "type": "p5_resizecanvas",
+  "message0": "resizeCanvas %1 w %2 h %3 noredraw %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "noredraw",
+      "check": "Boolean",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Resizes the canvas to given width and height. The canvas will be cleared and draw will be called immediately, allowing the sketch to re-render itself in the resized canvas.",
+  "helpUrl": "https://p5js.org/reference/#/p5/resizeCanvas"
+}
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
