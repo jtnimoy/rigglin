@@ -2167,6 +2167,39 @@ Blockly.defineBlocksWithJsonArray([
 }
 
 
+    ,
+
+    {
+  "type": "p5_keycode",
+  "message0": "keyCode",
+  "output": null,
+  "colour": 230,
+  "tooltip": "The variable keyCode is used to detect special keys such as BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyCode"
+    }
+
+    ,
+
+    {
+  "type": "p5_key",
+  "message0": "key",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable key always contains the value of the most recent key on the keyboard that was typed. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/key"
+    }
+
+    ,
+
+    {
+  "type": "p5_keyispressed",
+  "message0": "keyIsPressed",
+  "output": "Boolean",
+  "colour": 230,
+  "tooltip": "The boolean system variable keyIsPressed is true if any key is pressed and false if no keys are pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/keyIsPressed"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

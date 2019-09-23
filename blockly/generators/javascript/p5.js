@@ -651,3 +651,21 @@ Blockly.JavaScript['p5_keyisdown'] = function(block) {
     var code = 'P5.keyIsDown('+value_name+')';
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
+
+
+Blockly.JavaScript['p5_keycode'] = function(block) {
+    var code = 'P5.keyCode';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+
+Blockly.JavaScript['p5_key'] = function(block) {
+    var code = 'P5.key';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+
+Blockly.JavaScript['p5_keyispressed'] = function(block) {
+    var code = 'P5.keyIsPressed';
+    return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
