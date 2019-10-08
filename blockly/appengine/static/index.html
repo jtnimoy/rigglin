@@ -23,30 +23,32 @@
   <div id="toolbar-leftHalf">
     <a href="#">
       <img src="media/playbutton.png" height="32"
-	   onMouseOver="this.src='media/playbutton_rollover.png';"
-	   onMouseOut="this.src='media/playbutton.png';"
+	   onMouseOver="this.src='media/playbutton_rollover.png';tooltip1.textContent='play';"
+	   onMouseOut="this.src='media/playbutton.png';tooltip1.textContent='';"
 	   onMouseUp="runCode();" class="imageButton"/></a>
     
       <img src="media/stopbutton.png" height="32"
-	   onMouseOver="this.src='media/stopbutton_rollover.png';"
-	   onMouseOut="this.src='media/stopbutton.png';"
+	   onMouseOver="this.src='media/stopbutton_rollover.png';tooltip1.textContent='stop';"
+	   onMouseOut="this.src='media/stopbutton.png';tooltip1.textContent='';"
 	   onMouseUp="stopCode();" class="imageButton"/></a>
     
     <a href="#">
       <img src="media/savebutton.png" height="32"
-	   onMouseOver="this.src='media/savebutton_rollover.png';"
-	   onMouseOut="this.src='media/savebutton.png';"
+	   onMouseOver="this.src='media/savebutton_rollover.png';tooltip1.textContent='save to cloud';"
+	   onMouseOut="this.src='media/savebutton.png';tooltip1.textContent='';"
 	   onMouseUp="BlocklyStorage.link();" class="imageButton"/></a>
     <a href="#">
       <img src="media/codebutton.png" height="32"
-	   onMouseOver="this.src='media/codebutton_rollover.png';"
-	   onMouseOut="this.src='media/codebutton.png';"
+	   onMouseOver="this.src='media/codebutton_rollover.png';tooltip1.textContent='js code';"
+	   onMouseOut="this.src='media/codebutton.png';tooltip1.textContent='';"
 	   onMouseUp="viewCode();" class="imageButton"/></a>
     <a href="#">
       <img src="media/restorebutton.png" height="32"
-	   onMouseOver="this.src='media/restorebutton_rollover.png';"
-	   onMouseOut="this.src='media/restorebutton.png';"
+	   onMouseOver="this.src='media/restorebutton_rollover.png';tooltip1.textContent='local restore';"
+	   onMouseOut="this.src='media/restorebutton.png';tooltip1.textContent='';"
 	   onMouseUp="BlocklyStorage.restoreBlocks();" class="imageButton"/></a>
+
+    <div id="toolbar-tooltip"></div>
   </div>
   <div id="toolbar-rightHalf">
     <a href="https://github.com/jtnimoy/rigglin/wiki" id="titleButton">
@@ -379,6 +381,14 @@
       padding: 0;
   }
 
+
+  #toolbar-tooltip{
+      display: inline-block;
+      vertical-align: top;
+      font-family: sans-serif;
+      color: white;
+      margin: 20px;
+  }
   
   #toolbar-leftHalf{
       width:49%;
@@ -587,6 +597,8 @@ if (--window.LoopTrap == 0) \
 
   //hide splash screen
 
+  var tooltip1 = document.getElementById('toolbar-tooltip');
+  
   function hideSplash(){
       document.getElementById('welcomeSplash').style.display = 'none';
   };
