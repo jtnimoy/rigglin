@@ -2263,6 +2263,16 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/resizeCanvas"
 }
 
+    ,
+
+    {
+  "type": "p5_nocanvas",
+  "message0": "noCanvas",
+  "colour": 230,
+  "tooltip": "Removes the default canvas for a p5 sketch that doesn't require a canvas",
+  "helpUrl": "https://p5js.org/reference/#/p5/noCanvas"
+    }
+
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

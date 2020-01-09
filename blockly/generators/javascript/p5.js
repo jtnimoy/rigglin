@@ -694,3 +694,8 @@ Blockly.JavaScript['p5_resizecanvas'] = function(block) {
     return code;
 };
 
+
+Blockly.JavaScript['p5_nocanvas'] = function(block) {
+    var code = 'P5.noCanvas();\n';
+  return code;
+};
