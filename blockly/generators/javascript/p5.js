@@ -699,3 +699,74 @@ Blockly.JavaScript['p5_nocanvas'] = function(block) {
     var code = 'P5.noCanvas();\n';
   return code;
 };
+
+Blockly.JavaScript['p5_blendmode'] = function(block) {
+    var dropdown_mode = block.getFieldValue('mode');
+    var code = 'P5.blendMode(P5.'+dropdown_mode+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_setattributes'] = function(block) {
+    var dropdown_attribute = block.getFieldValue('attribute');
+    var checkbox_checked = block.getFieldValue('checked') == 'TRUE';
+    var code = 'P5.setAttributes(\''+dropdown_attribute+'\','+checkbox_checked+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_applymatrix'] = function(block) {
+    var value_a = Blockly.JavaScript.valueToCode(block, 'a', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_b = Blockly.JavaScript.valueToCode(block, 'b', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_c = Blockly.JavaScript.valueToCode(block, 'c', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_d = Blockly.JavaScript.valueToCode(block, 'd', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_e = Blockly.JavaScript.valueToCode(block, 'e', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_f = Blockly.JavaScript.valueToCode(block, 'f', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    
+    var code = 'P5.applyMatrix('
+	+ value_a + ','
+	+ value_b + ','
+	+ value_c + ','
+	+ value_d + ','
+	+ value_e + ','
+	+ value_f + ');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_resetmatrix'] = function(block) {
+    var code = 'P5.resetMatrix();\n';
+  return code;
+};
+
+
+Blockly.JavaScript['p5_rotatex'] = function(block) {
+    var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.rotateX('+value_angle+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_rotatey'] = function(block) {
+    var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    // TODO: Assemble JavaScript into code variable.
+    var code = 'P5.rotateY('+value_angle+');\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_rotatez'] = function(block) {
+    var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.rotateZ('+value_angle+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_shearx'] = function(block) {
+    var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.shearX('+value_angle+');\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_sheary'] = function(block) {
+    var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.shearY('+value_angle+');\n';
+    return code;
+};

@@ -2266,13 +2266,331 @@ Blockly.defineBlocksWithJsonArray([
     ,
 
     {
-  "type": "p5_nocanvas",
-  "message0": "noCanvas",
-  "colour": 230,
-  "tooltip": "Removes the default canvas for a p5 sketch that doesn't require a canvas",
-  "helpUrl": "https://p5js.org/reference/#/p5/noCanvas"
+	"type": "p5_nocanvas",
+	"message0": "noCanvas",
+	"previousStatement": null,
+	"nextStatement": null,
+	"colour": 230,
+	"tooltip": "Removes the default canvas for a p5 sketch that doesn't require a canvas",
+	"helpUrl": "https://p5js.org/reference/#/p5/noCanvas"
     }
 
+
+    ,
+
+    {
+  "type": "p5_blendmode",
+  "lastDummyAlign0": "RIGHT",
+  "message0": "blendMode %1 %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "mode",
+      "options": [
+        [
+          "ADD",
+          "ADD"
+        ],
+        [
+          "DARKEST",
+          "DARKEST"
+        ],
+        [
+          "LIGHTEST",
+          "LIGHTEST"
+        ],
+        [
+          "DIFFERENCE",
+          "DIFFERENCE"
+        ],
+        [
+          "EXCLUSION",
+          "EXCLUSION"
+        ],
+        [
+          "MULTIPLY",
+          "MULTIPLY"
+        ],
+        [
+          "SCREEN",
+          "SCREEN"
+        ],
+        [
+          "REPLACE",
+          "REPLACE"
+        ],
+        [
+          "REMOVE",
+          "REMOVE"
+        ],
+        [
+          "OVERLAY",
+          "OVERLAY"
+        ],
+        [
+          "HARD_LIGHT",
+          "HARD_LIGHT"
+        ],
+        [
+          "SOFT_LIGHT",
+          "SOFT_LIGHT"
+        ],
+        [
+          "DODGE",
+          "DODGE"
+        ],
+        [
+          "BURN",
+          "BURN"
+        ],
+        [
+          "SUBTRACT",
+          "SUBTRACT"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Blends the pixels in the display window according to the defined mode.",
+  "helpUrl": "https://p5js.org/reference/#/p5/blendMode"
+    }
+    ,
+    {
+  "type": "p5_setattributes",
+  "message0": "setAttributes %1 %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "attribute",
+      "options": [
+        [
+          "alpha",
+          "alpha"
+        ],
+        [
+          "depth",
+          "depth"
+        ],
+        [
+          "stencil",
+          "stencil"
+        ],
+        [
+          "antialias",
+          "antialias"
+        ],
+        [
+          "premultipliedAlpha",
+          "premultipliedAlpha"
+        ],
+        [
+          "preserveDrawingBuffer",
+          "preserveDrawingBuffer"
+        ],
+        [
+          "perPixelLighting",
+          "perPixelLighting"
+        ]
+      ]
+    },
+    {
+      "type": "field_checkbox",
+      "name": "checked",
+      "checked": true
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Set attributes for the WebGL Drawing context. This is a way of adjusting how the WebGL renderer works to fine-tune the display and performance.",
+  "helpUrl": "https://p5js.org/reference/#/p5/setAttributes"
+    }
+
+    ,
+
+    {
+  "type": "p5_applymatrix",
+  "message0": "applyMatrix %1 a %2 b %3 c %4 d %5 e %6 f %7",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "a",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "b",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "c",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "d",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "e",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "f",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Multiplies the current matrix by the one specified through the parameters.",
+  "helpUrl": "https://p5js.org/reference/#/p5/applyMatrix"
+    }
+    
+
+    ,
+
+
+    {
+  "type": "p5_resetmatrix",
+  "message0": "resetMatrix",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Replaces the current matrix with the identity matrix.",
+  "helpUrl": "https://p5js.org/reference/#/p5/resetMatrix"
+    }
+    ,
+    {
+  "type": "p5_rotatex",
+  "message0": "rotateX %1 angle %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "angle",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Rotates around X axis.",
+  "helpUrl": "https://p5js.org/reference/#/p5/rotateX"
+}
+    ,
+
+    {
+  "type": "p5_rotatey",
+  "message0": "rotateY %1 angle %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "angle",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Rotates around Y axis.",
+  "helpUrl": "https://p5js.org/reference/#/p5/rotateY"
+    }
+
+    ,
+
+    {
+  "type": "p5_rotatez",
+  "message0": "rotateZ %1 angle %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "angle",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Rotates around Z axis. Webgl mode only.",
+  "helpUrl": "https://p5js.org/reference/#/p5/rotateZ"
+    }
+
+    ,
+
+    {
+  "type": "p5_shearx",
+  "message0": "shearX %1 angle %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "angle",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Shears a shape around the x-axis the amount specified by the angle parameter.",
+  "helpUrl": "https://p5js.org/reference/#/p5/shearX"
+    }
+
+    
+    ,
+
+    {
+  "type": "p5_sheary",
+  "message0": "shearY %1 angle %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "angle",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "Shears a shape around the y-axis the amount specified by the angle parameter.",
+  "helpUrl": "https://p5js.org/reference/#/p5/shearY"
+    }
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)
