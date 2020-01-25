@@ -2591,6 +2591,68 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "Shears a shape around the y-axis the amount specified by the angle parameter.",
   "helpUrl": "https://p5js.org/reference/#/p5/shearY"
     }
+
+    ,
+
+    {
+  "type": "p5_winmousex",
+  "message0": "winMouseX",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable winMouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the window.",
+  "helpUrl": "https://p5js.org/reference/#/p5/winMouseX"
+    }
+
+    ,
+
+    {
+  "type": "p5_winmousey",
+  "message0": "winMouseY",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable winMouseY always contains the current vertical position of the mouse, relative to (0, 0) of the window.",
+  "helpUrl": "https://p5js.org/reference/#/p5/winMouseY"
+    }
+
+    ,
+
+    {
+  "type": "p5_pwinmousex",
+  "message0": "pwinMouseX",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable pwinMouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
+  "helpUrl": "https://p5js.org/reference/#/p5/pwinMouseX"
+    }
+
+    ,
+
+    {
+  "type": "p5_pwinmousey",
+  "message0": "pwinMouseY",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "The system variable pwinMouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
+  "helpUrl": "https://p5js.org/reference/#/p5/pwinMouseY"
+    }
+    ,
+    {
+  "type": "p5_mousebutton",
+  "message0": "mouseButton",
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Processing automatically tracks if the mouse button is pressed and which button is pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseButton"
+    }
+    ,
+    {
+  "type": "p5_mouseispressed",
+  "message0": "mouseIsPressed",
+  "output": "Boolean",
+  "colour": 230,
+  "tooltip": "The boolean system variable mouseIsPressed is true if the mouse is pressed and false if not.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseIsPressed"
+    }
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

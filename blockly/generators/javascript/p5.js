@@ -770,3 +770,34 @@ Blockly.JavaScript['p5_sheary'] = function(block) {
     var code = 'P5.shearY('+value_angle+');\n';
     return code;
 };
+
+
+Blockly.JavaScript['p5_winmousex'] = function(block) {
+    var code = 'P5.winMouseX';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_winmousey'] = function(block) {
+    var code = 'P5.winMouseY';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_pwinmousex'] = function(block) {
+    var code = 'P5.pwinMouseX';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_pwinmousey'] = function(block) {
+    var code = 'P5.pwinMouseY';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_mousebutton'] = function(block) {
+    var code = 'P5.mouseButton';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_mouseispressed'] = function(block) {
+  var code = 'P5.mouseIsPressed';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
