@@ -2653,6 +2653,188 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "The boolean system variable mouseIsPressed is true if the mouse is pressed and false if not.",
   "helpUrl": "https://p5js.org/reference/#/p5/mouseIsPressed"
     }
+    ,
+ {
+  "type": "p5_mousemoved",
+  "message0": "mouseMoved %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "block"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The mouseMoved() function is called every time the mouse moves and a mouse button is not pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseMoved"
+ }
+    ,
+
+    {
+  "type": "p5_mousedragged",
+  "message0": "mouseDragged %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The mouseDragged() function is called once every time the mouse moves and a mouse button is pressed. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseDragged"
+    }
+
+    ,
+
+    {
+  "type": "p5_mousepressed",
+  "message0": "mousePressed %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The mousePressed() function is called once after every time a mouse button is pressed.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mousePressed"
+    }
+
+    ,
+
+    {
+  "type": "p5_mousereleased",
+  "message0": "mouseReleased %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The mouseReleased() function is called every time a mouse button is released.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseReleased"
+    }
+
+    ,
+
+    {
+  "type": "p5_mouseclicked",
+  "message0": "mouseClicked %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The mouseClicked() function is called once after a mouse button has been pressed and then released.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mouseClicked"
+    }
+
+    ,
+
+    {
+  "type": "p5_doubleclicked",
+  "message0": "doubleClicked %1",
+  "args0": [
+    {
+      "type": "input_statement",
+      "name": "NAME"
+    }
+  ],
+  "colour": 230,
+  "tooltip": "The doubleClicked() function is executed every time a event listener has detected a dblclick event which is a part of the DOM L3 specification.",
+  "helpUrl": "https://p5js.org/reference/#/p5/doubleClicked"
+    }
+
+    ,
+
+    {
+  "type": "p5_constrain",
+  "message0": "constrain %1 n %2 low %3 high %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "n",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "low",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "high",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Constrains a value between a minimum and maximum value.",
+  "helpUrl": "https://p5js.org/reference/#/p5/constrain"
+    }
+    
+
+    ,
+
+    {
+  "type": "p5_exp",
+  "message0": "exp %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "n",
+      "check": "Number"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Returns Euler's number e (2.71828...) raised to the power of the n parameter.",
+  "helpUrl": "https://p5js.org/reference/#/p5/exp"
+    }
+
+    ,
+
+    {
+  "type": "p5_lerp",
+  "message0": "lerp %1 start %2 stop %3 amt %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "start",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "stop",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "amt",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Calculates a number between two numbers at a specific increment. ",
+  "helpUrl": "https://p5js.org/reference/#/p5/lerp"
+    }
+
+    
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

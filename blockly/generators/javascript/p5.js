@@ -801,3 +801,63 @@ Blockly.JavaScript['p5_mouseispressed'] = function(block) {
   var code = 'P5.mouseIsPressed';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+
+Blockly.JavaScript['p5_mousemoved'] = function(block) {
+    var statements_block = Blockly.JavaScript.statementToCode(block, 'block');
+    var code = 'P5.mouseMoved = function(){\n' + statements_block + '};\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_mousedragged'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.mouseDragged = function(){\n' + statements_name + '};\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_mousepressed'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.mousePressed = function(){\n' + statements_name + '};\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_mousereleased'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.mouseReleased = function(){\n' + statements_name + '};\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_mouseclicked'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.mouseClicked = function(){\n' + statements_name + '};\n';
+    return code;
+};
+
+
+Blockly.JavaScript['p5_doubleclicked'] = function(block) {
+    var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+    var code = 'P5.doubleClicked = function(){\n' + statements_name + '};\n';
+    return code;
+};
+
+Blockly.JavaScript['p5_constrain'] = function(block) {
+    var value_n = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_low = Blockly.JavaScript.valueToCode(block, 'low', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_high = Blockly.JavaScript.valueToCode(block, 'high', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.constrain('+value_n+','+value_low+','+value_high+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_exp'] = function(block) {
+    var value_n = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC);
+    var code = 'P5.exp('+value_n+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['p5_lerp'] = function(block) {
+    var value_start = Blockly.JavaScript.valueToCode(block, 'start', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_stop = Blockly.JavaScript.valueToCode(block, 'stop', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_amt = Blockly.JavaScript.valueToCode(block, 'amt', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = 'P5.lerp('+value_start+','+value_stop+','+value_amt+')';
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
