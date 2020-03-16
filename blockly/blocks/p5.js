@@ -2834,7 +2834,60 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": "https://p5js.org/reference/#/p5/lerp"
     }
 
-    
+    ,
+
+    {
+  "type": "p5_mag",
+  "message0": "mag %1 a %2 b %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "a",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "b",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Calculates the magnitude (or length) of a vector.",
+  "helpUrl": "https://p5js.org/reference/#/p5/mag"
+    }
+
+
+    ,
+
+    {
+  "type": "modulo",
+  "message0": "%1 %% %2 %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "a",
+      "check": "Number"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "b",
+      "check": "Number"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "returns modulo of the values",
+  "helpUrl": ""
+}
     
     
 ]);  // END JSON EXTRACT (Do not delete this comment.)

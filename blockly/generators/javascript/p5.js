@@ -861,3 +861,18 @@ Blockly.JavaScript['p5_lerp'] = function(block) {
     var code = 'P5.lerp('+value_start+','+value_stop+','+value_amt+')';
     return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+
+Blockly.JavaScript['p5_mag'] = function(block) {
+  var value_a = Blockly.JavaScript.valueToCode(block, 'a', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_b = Blockly.JavaScript.valueToCode(block, 'b', Blockly.JavaScript.ORDER_ATOMIC);
+  var code = 'P5.mag('+value_a+','+value_b+')';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['modulo'] = function(block) {
+    var value_a = Blockly.JavaScript.valueToCode(block, 'a', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var value_b = Blockly.JavaScript.valueToCode(block, 'b', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+    var code = value_a + " % " + value_b;
+    return [code, Blockly.JavaScript.ORDER_NONE];
+};
